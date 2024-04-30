@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- swiper script-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <title>Add Your Property</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+    />
+
+    <style>
+      ul {
+        list-style: none;
+      }
+      li {
+        display: flex;
+      }
+      .form {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 50px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+      }
+
+      .form .row {
+        position: relative;
+        width: 100%;
+        display: grid;
+        grid: auto / auto auto;
+        grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+        gap: 15px;
+      }
+
+      .form .row .col {
+        position: relative;
+        width: 100%;
+        margin: 20px -80px 20px 0;
+        transition: 0.5s;
+      }
+
+      .form .row .form-group {
+        position: relative;
+        width: 100%;
+        height: 40px;
+        color: #000;
+      }
+
+      .form .row .form-group input,
+      .form .row .form-group select,
+      .form .row .form-group textarea {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        outline: none;
+        font-size: 15px;
+        padding: 10px 0 10px 20px;
+        border: 1px solid rgba(0, 0, 0, 1);
+        color: #000;
+      }
+      .form .row .form-group label {
+        line-height: 30px;
+        font-size: 20px;
+        margin: 0;
+        display: block;
+        pointer-events: none;
+        font-weight: 500;
+      }
+
+      .row .col:nth-child(6) {
+        margin-top: 21px;
+      }
+
+      .form .row .form-group input:focus,
+      .form .row .form-group textarea:focus {
+        border: 3px solid #000;
+        transition: all 0.5s;
+      }
+
+      .form .btn {
+        width: 100%;
+        background-color: #192f63;
+        margin-top: 50px;
+        height: 55px;
+        border: none;
+        font-size: 20px;
+        color: #ffffff;
+        cursor: pointer;
+      }
+      .form .btn:focus {
+        outline: none;
+        background-color: #000;
+      }
+      .form .btn:hover {
+        background-color: #000;
+      }
+      @media screen and (max-width: 900px) {
+        .form .row {
+          grid-template-columns: repeat(auto-fit, minmax(70%, 1fr));
+        }
+
+        .form {
+          padding: 50px;
+        }
+
+        .form h2 {
+          font-size: 34px;
+        }
+      }
+      input[placeholder] {
+        font-weight: 100;
+      }
+
+      @media (min-device-width: 600px) {
+        img[data-src-600px] {
+          content: attr(data-src-600px, url);
+        }
+        .form {
+          padding-left: 50px;
+        }
+      }
+
+      @media (min-device-width: 800px) {
+        img[data-src-800px] {
+          content: attr(data-src-800px, url);
+        }
+        .form {
+          padding-left: 50px;
+        }
+      }
+
+      @media (max-width: 400px) {
+        .form {
+          padding-left: 10px;
+        }
+      }
+      .footer-list:not(:last-child) {
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+      }
+      .active {
+        background-color:#192f63;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div
+        class="logo"
+        style="display: inline-flex; align-items: center; gap: 5px"
+      >
+        <img
+        src="logo.jpeg"
+        />
+        <!-- <h1>Ma</h1> -->
+      </div>
+      <div class="navbar" id="navBar" style="background-color:#fff;">
+        <div class="close-menu-button" onclick="toggleMenu()">
+          <img src="x-regular-24.png" alt="close-menu" />
+        </div>
+        <ul>
+          <li>
+            <a href="Home.html"><i class="fa fa-fw fa-home"></i> Home</a>
+          </li>
+          <li><a href="rent.html">Rent</a></li>
+          <li><a href="sale.html">Sale</a></li>
+          <li><a href="Off-plan.html">Off Plan</a></li>
+          <li class="active"><a href="addproperty.html" style="color: #fff;">Add your Property</a></li>
+          <li><a href="contactus.html">Contact US</a></li>
+        </ul>
+      </div>
+      <div class="menu-button" onclick="toggleMenu()">
+        <img src="menu-regular-24.png" alt="open-menu" />
+      </div>
+    </nav>
+
+    <!-- home-background section ---------------------------------------------------------------------->
+    <section class="home-background">
+      <div class="background-detail">
+        <img
+          class="background-img"
+          src="7ad0550218f646f12b1405cdc835a1bc.jpg"
+          style="width: 100%"
+        />
+      </div>
+    </section>
+
+    <!-- Form section --------------------------------------------------------------->
+
+    <div class="form">
+      <form id="requestForm" onsubmit="validateAndSubmitForm()">
+        <h1 style="margin-bottom: 20px; text-decoration: underline">
+          Add Your Property
+        </h1>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label>First Name</label>
+              <input
+                type="text"
+                placeholder="Enter your first name"
+                id="firstName"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="form-group">
+              <label>Last name</label>
+              <input
+                type="text"
+                placeholder="Enter your last name"
+                id="lastName"
+                
+              />
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="form-group">
+              <label>Email</label>
+              <input
+                type="email"
+                placeholder="Enter your Email"
+                id="email"
+              />
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="form-group">
+              <label>Phone</label>
+              <input
+                type="text"
+                placeholder="Enter your phone number"
+                id="phoneNumber"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="form-group">
+              <label>Category</label>
+              <select id="category" required>
+                <!-- Options for the category -->
+                <option value="" disabled selected>Property Type</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="form-group">
+              <label>Select Service:</label>
+              <select id="service" required>
+                <option value="" disabled selected>Select Service</option>
+                <!-- Options for the service -->
+              </select>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="form-group">
+              <label>Details</label>
+              <textarea
+                title="* message"
+                rows="5"
+                id="details"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+        <button type="submit" value="Submit" class="btn">Submit</button>
+      </form>
+    </div>
+
+    <script>
+
+
+      function validateAndSubmitForm() {
+        const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value;
+        const email = document.getElementById('email').value;
+        const phoneNumber = document.getElementById('phoneNumber').value;
+        const category = document.getElementById('category').value;
+        const service = document.getElementById('service').value;
+        const details = document.getElementById('details').value;
+
+        // Perform validation
+        //if (!validateEmail(email)) {
+        //  alert('Please enter a valid email address.');
+         // return false;
+        //}
+
+        if (!validatePhone(phoneNumber)) {
+          alert('Please enter a valid phone number.');
+          return false;
+        }
+        // Additional validations can be added based on requirements
+        // If all validations pass, you can proceed with form submission
+        // You may want to replace the following line with your submission logic
+        submitRequestForm();
+        // Prevent form from actually submitting (since we are handling it here)
+        return false;
+      }
+
+      //function validateEmail(email) {
+        // Basic email validation regex
+       // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+       // return emailRegex.test(email);
+    //  }
+
+      function validatePhone(phoneNumber) {
+        // Basic phone number validation regex
+        const phoneRegex = /^\d{5,20}$/;
+        return phoneRegex.test(phoneNumber);
+      }
+
+
+      function submitRequestForm() {
+        const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value;
+        const email = document.getElementById('email').value;
+        const phoneNumber = document.getElementById('phoneNumber').value;
+        const category = document.getElementById('category').value;
+        const service = document.getElementById('service').value;
+        const details = document.getElementById('details').value;
+
+        const formData = {
+          firstName,
+          lastName,
+          email,
+          phoneNumber,
+          category,
+          service,
+          details,
+        };
+
+        // Replace '{{host}}/request/create' with your actual API endpoint
+        const apiUrl = 'https://real-estate-backend-9d9v.onrender.com';
+
+        fetch(`${apiUrl}/request/create`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        })
+          .then((response) => {
+            if (response.ok) {
+              alert('sent successfully!');
+            } else {
+              return response.json().then((data) => {
+                alert(`Error: ${data.message}`);
+              });
+            }
+          })
+          .catch((error) => console.error('Error:', error));
+      }
+
+      // Populate category and service options (replace these with your actual options)
+      const categorySelect = document.getElementById('category');
+      const serviceSelect = document.getElementById('service');
+
+      const categoryOptions = [
+        'Residential Land',
+        'Farm',
+        'Commercial Land',
+        'Industrial Land',
+        'Villa',
+        'Commercial Villa',
+        'Town House',
+        'Residential Building',
+        'Commercial Building',
+        'Shop',
+        'Office',
+        'Showroom',
+        'Business Center',
+        'Apartment',
+        'Compound',
+        'Hotal Apartments',
+        'Bunglow',
+        'Factory',
+        'Staff Accommodation',
+        'Comp',
+        'Ware House',
+      ];
+      const serviceOptions = ['Rent', 'Sale', 'Invest', 'Manage', 'Evaluate'];
+
+      categoryOptions.forEach((option) => {
+        const optionElement = document.createElement('option');
+        optionElement.value = option;
+        optionElement.textContent = option;
+        categorySelect.appendChild(optionElement);
+      });
+
+      serviceOptions.forEach((option) => {
+        const optionElement = document.createElement('option');
+        optionElement.value = option;
+        optionElement.textContent = option;
+        serviceSelect.appendChild(optionElement);
+      });
+
+      // Prevent the default form submission behavior
+      document
+        .getElementById('requestForm')
+        .addEventListener('submit', function (event) {
+          event.preventDefault();
+        });
+    </script>
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-brand">
+            <p class="footer-list-title">MASAR</p>
+
+            <!-- <a href="#" class="logo">
+      <img src="imgs/aa643105-4d9b-44fa-921f-8ffc75b6dfa2.jpg" alt="Homeverse logo" style="width: 200px;">
+    </a> -->
+
+            <p class="section-text">
+              MASAR can ensure that securing your dream home will be a smooth
+              process whether you wish to Buy or Rent from the primary or
+              secondary market.
+            </p>
+
+            <ul class="contact-list">
+              <li>
+                <a href="#" class="contact-link">
+                  <ion-icon name="location-outline"></ion-icon>
+
+                  <address>Brooklyn, New York, United States</address>
+                </a>
+              </li>
+
+              <li>
+                <a href="tel:+971566702470" class="contact-link">
+                  <ion-icon name="call-outline"></ion-icon>
+
+                  <span>+971 56 670 2470</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="contact-link">
+                  <ion-icon name="mail-outline"></ion-icon>
+
+                  <span>contact@Masar.com</span>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="social-list">
+              <li>
+                <a href="https://www.facebook.com/profile.php?id=61556005683471&mibextid=ZbWKwL" class="social-link" target="_blank">
+                  <ion-icon
+                    name="logo-facebook"
+                    style="font-size: 30px"
+                  ></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link" target="_blank">
+                  <ion-icon
+                    name="logo-twitter"
+                    style="font-size: 30px"
+                  ></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.tiktok.com/@masar_real_estate?is_from_webapp=1&sender_device=pc" class="social-link" target="_blank">
+                  <ion-icon
+                    name="logo-TikTok"
+                    style="font-size: 30px"
+                  ></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256">
+                    <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8,8)"><path d="M18.5,2c-7.75,0 -12.5,9.25 -12.5,14c0,0 3.25,-12 13,-12c3.625,0 6,2 6,2c0,0 -1,-4 -6.5,-4zM17.5,7c-1.933,0 -3.5,1.567 -3.5,3.5c0,1.933 1.567,3.5 3.5,3.5c1.933,0 3.5,-1.567 3.5,-3.5c0,-1.933 -1.567,-3.5 -3.5,-3.5zM20,16c0,0 -1,1 -5,1v10.5c0,1.381 1.119,2.5 2.5,2.5c1.381,0 2.5,-1.119 2.5,-2.5z"></path></g></g>
+                  </svg>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://accounts.snapchat.com/v2/welcome" class="social-link" target="_blank">
+                  <ion-icon
+                    name="logo-snapchat"
+                    style="font-size: 30px"
+                  ></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.instagram.com/masar.realestate.ae?igsh=MWY0bGRtYWw2cm1oZA==" class="social-link" style="font-size: 30px" target="_blank">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.linkedin.com/company/101589068/admin/feed/posts/?feedType=following" class="social-link" target="_blank">
+                  <ion-icon
+                    name="logo-Linkedin"
+                    style="font-size: 30px"
+                  ></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.pinterest.com/Masar16/" class="social-link" target="_blank">
+                  <ion-icon
+                    name="logo-Pinterest"
+                    style="font-size: 30px"
+                  ></ion-icon>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-link-box">
+            <ul class="footer-list">
+              <li>
+                <p class="footer-list-title">Quick Link Explore</p>
+              </li>
+
+              <li>
+                <a href="rent.html" class="footer-link">Properties For Rent</a>
+              </li>
+
+              <li>
+                <a href="sale.html" class="footer-link">Properties For Sale</a>
+              </li>
+
+              <li>
+                <a href="Off-plan.html" class="footer-link">Off Plan</a>
+              </li>
+
+              <li>
+                <a href="Home.html#ex" class="footer-link">Abu Dhabi Areas</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Residential</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Commercial</a>
+              </li>
+
+            </ul>
+
+            <ul class="footer-list">
+              <li>
+                <p class="footer-list-title">OUR Services</p>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Buying properties</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Selling Properties</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Leasing Properties</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Evaluation</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Managment</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Investment</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Properly Consultation</a>
+              </li>
+            </ul>
+
+            <ul class="footer-list">
+              <li>
+                <p class="footer-list-title">Keep in Touch</p>
+              </li>
+
+              <form id="form3" onsubmit="validateAndSendEmail();">
+                <li>
+                  <input
+                    type="email"
+                    placeholder="Your Email here..."
+                    class="subscribe"
+                    id="email3"
+                    required
+                  />
+                </li>
+
+                <li>
+                  <input
+                    type="text"
+                    placeholder="Your Number here..."
+                    class="subscribe"
+                    id="phone3"
+                    required
+                  />
+                </li>
+
+                <li>
+                  <button
+                    type="submit"
+                    class="subscribe"
+                    style="background-color: #2a8ded; color: #ffffff"
+                  >
+                    Submit
+                  </button>
+                </li>
+              </form>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+      <script>
+        let form3 = document.getElementById('form3');
+        form3.addEventListener('submit', function (event) {
+          event.preventDefault();
+        });
+
+        function validateAndSendEmail() {
+          let phone3 = document.getElementById('phone3').value;
+          let email3 = document.getElementById('email3').value;
+
+          if (!validateEmail(email3)) {
+            alert('Please enter a valid email address.');
+            return;
+          }
+
+          if (!validatePhone(phone3)) {
+            alert('Please enter a valid phone number.');
+            return;
+          }
+
+          let body = `Email: ${email3} <br>PhoneNumber: ${phone3}`;
+          Email.send({
+            Host: 'smtp.elasticemail.com',
+            Username: 'basantsaed718@gmail.com',
+            Password: '233DE19F71A53AA86828631A9A3B3167E6D0',
+            To: 'basantsaeed267@gmail.com',
+            From: 'basantsaed718@gmail.com',
+            Subject: 'New Form Submission From Your Website..',
+            Body: body,
+          }).then((message) => alert(message));
+        }
+
+        function validateEmail(email) {
+          // Basic email validation regex
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return emailRegex.test(email);
+        }
+
+        function validatePhone(phone) {
+          // Basic phone number validation regex
+          const phoneRegex = /^\d{5,20}$/;
+          return phoneRegex.test(phone);
+        }
+      </script>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>

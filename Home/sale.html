@@ -1,0 +1,2346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- swiper script-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <title>Sale</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      a,
+      img,
+      span,
+      button,
+      ion-icon {
+        display: block;
+      }
+
+      button {
+        cursor: pointer;
+      }
+
+      address {
+        font-style: normal;
+      }
+
+      ion-icon {
+        pointer-events: none;
+      }
+
+      /*-----------------------------------*\
+  #REUSED STYLE
+\*-----------------------------------*/
+      .container-rent {
+        padding-inline: 15px;
+      }
+      button,
+      a {
+        transition: var(--transition);
+      }
+      .h3 > a {
+        color: inherit;
+      }
+      .w-100 {
+        width: 100%;
+      }
+      .section-subtitle {
+        color: #fff;
+        font-size: var(--fs-5);
+        font-weight: var(--fw-600);
+        padding: 5px 20px;
+        background: #192f63;
+        width: max-content;
+        border-radius: 50px;
+        margin-inline: auto;
+        margin-bottom: 15px;
+      }
+      .section-title {
+        margin-bottom: var(--margin-bottom, 5px);
+      }
+
+    .property .describtionloc {
+        font-style: italic;
+        margin-bottom: 10px;
+      }
+
+      /*-----------------------------------*\
+  #PROPERTY
+\*-----------------------------------*/
+
+      .property {
+        padding-block: var(--section-padding);
+        padding-top: 20px;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+        background-color: hsl(192deg 6.4% 86.37% / 36%);
+      }
+
+      .property-card {
+        border: 1px solid var(--alice-blue);
+        box-shadow: var(--shadow-2);
+      }
+
+      .property-card .card-banner {
+        position: relative;
+        aspect-ratio: 2 / 1.5;
+        overflow: hidden;
+      }
+
+      .property-card .card-banner img {
+        height: 100%;
+        object-fit: cover;
+        transition: 0.5s ease;
+      }
+
+      .property-card .card-banner::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          hsla(0, 0%, 0%, 0.95),
+          transparent 30%
+        );
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .property-card .banner-actions {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
+        display: flex;
+        flex-wrap: wrap-reverse;
+        align-items: center;
+        gap: 15px 10px;
+        z-index: 1;
+      }
+
+      .banner-actions-btn {
+        color: var(--white);
+        font-size: var(--fs-6);
+        line-height: 1;
+        display: flex;
+        align-items: flex-end;
+        gap: 4px;
+      }
+
+      .banner-actions-btn ion-icon {
+        font-size: 16px;
+      }
+
+      .banner-actions-btn:first-child {
+        margin-right: auto;
+      }
+
+      .banner-actions-btn:is(:hover, :focus) {
+        color: var(--orange-soda);
+      }
+
+      .property-card .card-content {
+        padding: 30px 15px 15px;
+        border-bottom: 1px solid hsla(0, 0%, 0%, 0.1);
+      }
+
+      .card-price {
+        color: #192f63;
+        font-family: var(--ff-poppins);
+        font-size: var(--fs-5);
+        margin-bottom: 5px;
+      }
+
+      .card-price strong {
+        font-size: var(--fs-4);
+        font-weight: var(--fw-600);
+      }
+
+      .property-card .card-title {
+        --font-weight: var(--fw-600);
+        margin-bottom: 15px;
+      }
+
+      .property-card .card-title > a:is(:hover, :focus) {
+        color: #192f63;
+      }
+
+      .property-card .card-text {
+        color: black;
+        font-size: var(--fs-5);
+        line-height: 1.8;
+        margin-bottom: 25px;
+      }
+
+      .property-card .card-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        row-gap: 15px;
+      }
+
+      .property-card .card-item {
+        padding-block: 5px;
+        color: black;
+        font-size: var(--fs-5);
+      }
+
+      .property-card .card-item:not(:last-child) {
+        padding-right: 15px;
+        border-right: 1px solid hsla(0, 0%, 0%, 0.2);
+        margin-right: 20px;
+      }
+
+      .property-card .card-item :is(strong, ion-icon) {
+        display: inline-block;
+      }
+
+      .property-card .card-item ion-icon {
+        margin-left: 2px;
+        margin-bottom: -2px;
+      }
+
+      .property-card .card-item span {
+        margin-top: 5px;
+      }
+
+    
+.card-footer {
+  display: flex;
+    /* flex-wrap: wrap-reverse; */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.author-avatar {
+  width: 60px;
+  height: 35px;
+  overflow: hidden;
+  /* border-radius: 50%; */
+}
+
+.author-name > a {
+  color: var(--dark-jungle-green);
+  font-family: var(--ff-poppins);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-600);
+  margin-bottom: 3px;
+}
+
+.author-name > a:is(:hover, :focus) {
+  color: #192f63;
+}
+
+.author-title {
+  color: var(--cadet);
+  font-size: var(--fs-7);
+}
+
+.card-footer-actions {
+  display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.card-footer-actions-btn {
+  background: #192f63;
+  color: white;
+  width: 115px;
+  height: 35px;
+  display: inline-flex;
+  align-items: center;
+  place-items: center;
+  font-size: 16px;
+  border-radius: 10px;
+  justify-content: center;
+  gap: 5px;
+
+}
+
+.card-footer-actions-btn:is(:hover, :focus) {
+  background: black;
+  color: var(--white);
+}
+/*----
+      /*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
+
+      /**
+ * responsive for larger than 600px screen
+ */
+
+      @media (min-width: 600px) {
+        /**
+   * CUSTOM PROPERTY
+   */
+
+        :root {
+          /**
+     * typography
+     */
+
+          --fs-2: 1.875rem;
+        }
+
+        /**
+   * REUSED STYLE
+   */
+
+        .container {
+          max-width: 550px;
+          margin-inline: auto;
+        }
+
+
+       /**
+   * PROPERTY
+   */
+
+        .property .container {
+          max-width: unset;
+          padding-inline: 25px;
+        }
+      }
+      /**
+ * responsive for larger than 768px screen
+ */
+
+      @media (min-width: 768px) {
+        /**
+   * CUSTOM PROPERTY
+   */
+
+        :root {
+          /**
+     * typography
+     */
+
+          --fs-1: 2.5rem;
+          --fs-5: 0.938rem;
+          --fs-6: 0.875rem;
+        }
+        /**
+   * REUSED STYLE
+   */
+        .container {
+          max-width: 720px;
+        }
+
+        .btn {
+          --fs-5: 1rem;
+          padding: 12px 28px;
+        }
+      }
+
+      /**
+ * responsive for larger than 992px screen
+ */
+
+      @media (min-width: 992px) {
+        /**
+   * CUSTOM PROPERTY
+   */
+
+        :root {
+          /**
+     * typography
+     */
+
+          --fs-1: 3.125rem;
+          --fs-4: 1.375rem;
+        }
+
+        /**
+   * REUSED STYLE
+   */
+
+        .container {
+          max-width: 970px;
+        }
+
+        .btn {
+          padding: 15px 40px;
+        }
+
+        /**
+   * PROPERTY
+   */
+
+        .property-card .card-content {
+          padding-inline: 30px;
+        }
+
+        .card-footer {
+          padding: 20px 5px 30px;
+        }
+      }
+
+      /**
+ * responsive for larger than 1200px screen
+ */
+
+      @media (min-width: 1200px) {
+        /**
+   * CUSTOM PROPERTY
+   */
+
+        :root {
+          /**
+     * typography
+     */
+
+          --fs-2: 2.75rem;
+          --fs-4: 1.5rem;
+        }
+        /**
+   * REUSED STYLE
+   */
+
+        .container {
+          max-width: 1200px;
+        }
+      }
+
+      :root {
+        --swiper-theme-color: #192f63;
+        --swiper-navigation-size: 38px;
+      }
+      .swiper {
+        height: 100%;
+      }
+
+      /*Dropdown sction..............................*/
+      .sectiondropdown {
+        margin-bottom: 20px;
+        margin-top: 30px;
+      }
+      .dropbtn {
+        display: flex;
+        background-color: #192f63;
+        color: white;
+        padding: 16px;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+        justify-content: center;
+        gap: 5px;
+      }
+      .dropbtn:hover {
+        background-color: black;
+      }
+      #myInput {
+        box-sizing: border-box;
+        background-image: url("searchicon.png");
+        background-position: 14px 12px;
+        background-repeat: no-repeat;
+        font-size: 16px;
+        padding: 14px 20px 12px 45px;
+        border: none;
+        border-bottom: 1px solid #ddd;
+      }
+      #myInput:focus {
+        outline: 3px solid #ddd;
+      }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 20px;
+        margin-left: 20px;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f6f6f6;
+        min-width: 230px;
+        overflow: auto;
+        border: 1px solid #ddd;
+        z-index: 1;
+        max-height: 200px; /* Set your desired maximum height */
+        overflow-y: auto;
+      }
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown a:hover {
+        background-color: #ddd;
+      }
+      @media (max-width: 300px) {
+      .dropdown{
+      margin-left:0px;
+      }}
+      .show {
+        display: block;
+        z-index: 10;
+      }
+      :root {
+        --swiper-theme-color: #192f63;
+      }
+      :root {
+        --swiper-navigation-size: 38px;
+      }
+      .active {
+        background-color: #192f63;
+      }
+
+      .container {
+        width: 100%;
+        padding: 40px 0;
+      }
+      .slide-container {
+        margin: 0 30px;
+        overflow: hidden;
+      }
+    
+  
+      .swiper-navBtn {
+        color: #fff;
+        height: 40px;
+        width: 40px;
+        background:#192f63;
+        border-radius: 50%;
+      }
+      .swiper-navBtn::before,
+      .swiper-navBtn::after {
+        font-size: 18px;
+      }
+  
+      .swiper-pagination-bullet {
+        background-color: #000;
+      }
+      @media (max-width: 300px) {
+        .slide-container {
+          margin: 0 20px;
+        }}
+        @media (max-width: 400px) {
+        .card-footer {
+          display: flex;
+          /* flex-wrap: wrap-reverse; */
+          align-items: center;
+          flex-direction: column;
+      }}
+    </style>
+  </head>
+
+  <body>
+    <!-- header section --------------------------------------------------------------------------------------------------------------------->
+    <nav>
+      <div
+        class="logo"
+        style="display: inline-flex; align-items: center; gap: 5px"
+      >
+        <img src="logo.jpeg"/>
+        <!-- <h1>Ma</h1> -->
+      </div>
+      <div class="navbar" id="navBar" style="background-color: #fff">
+        <div class="close-menu-button" onclick="toggleMenu()">
+          <img src="x-regular-24.png" alt="close-menu" />
+        </div>
+        <ul>
+          <li>
+            <a href="Home.html"><i class="fa fa-fw fa-home"></i> Home</a>
+          </li>
+          <li><a href="rent.html">Rent</a></li>
+          <li class="active">
+            <a href="sale.html" style="color: #fff">Sale</a>
+          </li>
+          <li><a href="Off-plan.html">Off Plan</a></li>
+          <li><a href="addproperty.html">Add your Property</a></li>
+          <li><a href="contactus.html">Contact US</a></li>
+        </ul>
+      </div>
+      <div class="menu-button" onclick="toggleMenu()">
+        <img src="menu-regular-24.png" alt="open-menu" />
+      </div>
+    </nav>
+    <!-- home-background section --------------------------------------------------------------------------------------------->
+    <section class="home-background">
+      <div class="background-detail">
+        <img
+          class="background-img"
+          src="AdobeStock_602255720.jpeg"
+          style="width: 100%"
+        />
+      </div>
+    </section>
+    <!-- Dropdown menu section -------------------------------------------------------------------------------------------------------->
+    <section class="sectiondropdown">
+      <div class="dropdown">
+        <h4 class="h2 section-title">>> Explore Sale Properties</h4>
+        <button onclick="myFunction()" class="dropbtn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            style="fill: rgb(255, 255, 255); transform: msFilter"
+          >
+            <path
+              d="M21 3H5a1 1 0 0 0-1 1v2.59c0 .523.213 1.037.583 1.407L10 13.414V21a1.001 1.001 0 0 0 1.447.895l4-2c.339-.17.553-.516.553-.895v-5.586l5.417-5.417c.37-.37.583-.884.583-1.407V4a1 1 0 0 0-1-1zm-6.707 9.293A.996.996 0 0 0 14 13v5.382l-2 1V13a.996.996 0 0 0-.293-.707L6 6.59V5h14.001l.002 1.583-5.71 5.71z"
+            ></path>
+          </svg>
+          Select Your Perfect City
+        </button>
+        <div id="myDropdown" class="dropdown-content">
+          <input
+            type="text"
+            placeholder="Search.."
+            id="myInput"
+            onkeyup="filterFunction()"
+          />
+          <a href="#AbuDhabi-sale">Abu Dhabi City</a>
+          <a href="#Rabdan-sale">Rabdan</a>
+          <a href="#AlAjban-sale">Al Ajban</a>
+          <a href="#AlBahia-sale">Al Bahia</a>
+          <a href="#AlAryam-sale">Al Aryam</a>
+          <a href="#AlFalah-sale">Al Falah City</a>
+          <a href="#AlFaya-sale">Al Faya</a>
+          <a href="#AlGhadeer-sale">Al Ghadeer</a>
+          <a href="#AlHudairiyat-sale">Al Hudairiyat Island</a>
+          <a href="#AlKhatim-sale">Al Khatim</a>
+          <a href="#AlKhaznah-sale">Al Khaznah</a>
+          <a href="#AlKhaznah-sale">Al Khaznah</a>
+          <a href="#AlMafraq-sale">Al Mafraq</a>
+          <a href="#AlMaria-sale">Al Maria Island</a>
+          <a href="#AlMirfa-sale">Al Mirfa</a>
+          <a href="#AlMuneera-sale">Al Muneera</a>
+          <a href="#AlMuntazah-sale">Al Muntazah</a>
+          <a href="#AlNahda-sale">Al Nahda</a>
+          <a href="#AlGurm-sale">Al Gurm</a>
+          <a href="#AlRahaGardens-sale">Al Raha Gardens</a>
+          <a href="#AlRahaBeach-sale">Al Raha Beac</a>
+          <a href="#GolfGardens-sale">Golf Gardens</a>
+          <a href="#AlRahba-sale">Al Rahba</a>
+          <a href="#AlRawdah-sale">Al Rawdah</a>
+          <a href="#AlReef-sale">Al Reef</a>
+          <a href="#AlReem-sale">Al Reem</a>
+          <a href="#AlSamha-sale">Al Samha</a>
+          <a href="#AlShahama-sale">Al Shahama</a>
+          <a href="#AlShamkha-sale">Al Shamkha</a>
+          <a href="#AlRiyadh-sale">Al Riyadh</a>
+          <a href="#AlShawamekh-sale">Al Shawamekh</a>
+          <a href="#AlSilaa-sale">Al Silaa</a>
+          <a href="#AlWathba-sale">Al Wathba</a>
+          <a href="#Baniyas-sale">Baniyas</a>
+          <a href="#HydraVillage-sale">Hydra Village</a>
+          <a href="#Khalifa-sale">Khalifa City</a>
+          <a href="#Shakhbout-sale">Shakhbout</a>
+          <a href="#MohamedBinZayed-sale">Mohamed Bin Zayed</a>
+          <a href="#MadinetZayed-sale">Madinet Zayed</a>
+          <a href="#Liwa-sale">Liwa</a>
+          <a href="#Masdar-sale">Masdar City</a>
+          <a href="#Musaffah-sale">Musaffah</a>
+          <a href="#AlNareel-sale">Al Nareel Island</a>
+          <a href="#Ramhan-sale">Ramhan Island</a>
+          <a href="#AlSaadiyat-sale">Al Saadiyat Island</a>
+          <a href="#SasAlNakheel-sale">Sas Al Nakheel</a>
+          <a href="#Yas-sale">Yas Island</a>
+        </div>
+      </div>
+      <hr />
+      <script>
+        /* When the user clicks on the button,
+      toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        function filterFunction() {
+          var input, filter, ul, li, a, i;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          div = document.getElementById("myDropdown");
+          a = div.getElementsByTagName("a");
+          for (i = 0; i < a.length; i++) {
+            txtValue = a[i].textContent || a[i].innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              a[i].style.display = "";
+            } else {
+              a[i].style.display = "none";
+            }
+          }
+        }
+      </script>
+    </section>
+    <!-- Properties section-------------------------------------------------------------------------------------------------------- -->
+
+    <section class="property" id="AbuDhabi-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Abu Dhabi City</h2>
+        <p class="describtionloc">
+          Abu Dhabi, the capital of the United Arab Emirates, sits off the
+          mainland on an island in the Persian (Arabian) Gulf. Its focus on oil
+          exports and commerce is reflected by the skyline’s modern towers and
+          shopping megacenters such as Abu Dhabi and Marina malls. Beneath
+          white-marble domes, the vast Sheikh Zayed Grand Mosque features an
+          immense Persian carpet, crystal chandeliers and capacity for 41,000
+          worshipers.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="Rabdan-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Rabdan</h2>
+        <p class="describtionloc">
+          Abu Dhabi Gate City is a waterfront residential community in Abu
+          Dhabi. Formerly known as Officers City, the community is positioned
+          close to Mussafah Bridge towards the west of the capital. The suburban
+          neighborhood offers luxurious residential units and a serene living
+          environment. Moreover, the area’s location allows residents to remain
+          connected with downtown Abu Dhabi.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlAjban-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Ajban</h2>
+        <p class="describtionloc">
+          Al Ajban is a residential area in Al Ain located at the northern side
+          of the emirate. Three of the major roads of the emirate; Al Faya Road
+          (E75), Al Taf Road (E16) and Al Faqa Road (E14) run alongside the
+          community. The district has standalone villas available in different
+          layouts and farmhouses. A remote residential area of Al Ain The
+          well-connected road network provides ease for commute Consists of
+          independent houses in unique configurations Located close to Dubai –
+          Al Ain border
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlBahia-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Bahia</h2>
+        <p class="describtionloc">
+          Al Bahia is a 10-minute drive away from Abu Dhabi International
+          Airport and is conveniently reachable from the Abu Dhabi - Al Shahama
+          Road. It is a coastal area composed of mangrove plantations along the
+          coastal strip with spacious apartments and peaceful streets.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlAryam-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Aryam</h2>
+        <p class="describtionloc">
+          Al Aryam Island is an island in the Persian gulf off the west coast of
+          Abu Dhabi in the United Arab Emirates. It was formerly known as Bu
+          Khushaishah. The island is 60km away from Abu Dhabi and is connected
+          to the mainland through a bridge.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlFalah-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Falah City</h2>
+        <p class="describtionloc">
+          Al Falah is a master-planned community developed for UAE nationals and
+          is located on the east side of the Abu Dhabi International Airport and
+          Abu Dhabi-Dubai highway. Each of the five villages is arranged around
+          its own “Village and Neighborhood Center” and contains a mosque, a
+          market square, and a mix of local shops and offices.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlFaya-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Faya</h2>
+        <p class="describtionloc">
+          Al Faya Al Ain Road Abu Dhabi UAE is a Local Business, located at: Abu
+          Dhabi, United Arab Emirates.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlGhadeer-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Ghadeer</h2>
+        <p class="describtionloc">
+          Al Ghadeer is a rapidly growing community by Aldar, a leading real
+          estate developer in Abu Dhabi. Nestling on the Dubai-Abu Dhabi border,
+          it comprises low-rise residential buildings and villas. However, the
+          location might not be the best fit for people who like short commutes
+          since Al Ghadeer is slightly away from key districts of both the
+          Emirates. Residential areas in the town have recently evolved
+          resulting in an increased demand for properties, especially for newly
+          constructed apartments.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlHudairiyat-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Hudairiyat Island</h2>
+        <p class="describtionloc">
+          Al Hudairiyat Island Located at the end of the suspension, the island
+          has become a favourite tourist attraction and a great spot for
+          residents to relax on weekends. Since its opening, the island has been
+          home to several attractions like cycling, sports courts and the beach.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlKhatim-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Khatim</h2>
+        <p class="describtionloc">
+          Al Khatim Desert Safari is a beautiful desert and is located on the Al
+          Ain highway road E22 and also known for Al Ain Desert Safari, which is
+          only 80 kilometres away from downtown the Emirate of Abu Dhabi. It is
+          one of the best locations and most famous places for many desert
+          activities, including 4x4 off-road driving. Al Khatim Desert is also
+          known for its tranquil atmosphere, along with its wonderful landscapes
+          and dunes. People who enjoy an adrenaline-pumping off-road adventure
+          can find this place the best spot. Explore and discover this part of
+          Abu Dhabi with an off-road tour in the famous Al Khatim Desert.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlKhaznah-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Khaznah</h2>
+        <p class="describtionloc">
+          Al khazna is located 100 km from Abu Dhabi , in the middle of the road
+          between the capital Abu Dhabi and the city of Al Ain , which its
+          people call the green paradise. The city contains many services and
+          public facilities such as municipal, health and educational services,
+          etc.. Al khazna is divided into three sections: the old, new and
+          circular treasury, and is famous for large farms and the treasury
+          palace which is one of the major monuments in the region.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlMafraq-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Mafraq</h2>
+        <p class="describtionloc">
+          Al Mafraq Part of Khalifa City B (Shakhbout City), Al Mafraq is a
+          mixed-use development in Abu Dhabi. Counted as one of the most
+          sought-after areas in the emirate, Al Mafraq is bound by main roads
+          and is located close to a range of amenities, including mosques,
+          shops, schools, restaurants and medical facilities. Residents have
+          access to Sheikh Shakhbout Medical City, formerly known as Al Mafraq
+          Hospital. It is one of the top government hospitals in Abu Dhabi.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlMaria-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Maria Island</h2>
+        <p class="describtionloc">
+          Al Mariah Island is the perfect destination for global business. Abu
+          Dhabi Global Market Square is the commercial center of Al Maryah
+          Island and is home to various blue chip companies and local, regional
+          and international institutions.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlMirfa-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Mirfa</h2>
+        <p class="describtionloc">
+          Al Mirfa, also known as Al Marfa, is a coastal community located in Al
+          Dhafra region of Abu Dhabi. The residential district is connected to
+          the mainland through Sheikh Khalifa Bin Zayed International Road which
+          is running along with the community. It features villas in different
+          configurations and a range of communal facilities such as parks,
+          hospital and education institutes.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlMuneera-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Muneera</h2>
+        <p class="describtionloc">
+          Al Muneera is an 11 km beachfront residential project developed by
+          Aldar Properties, Abu Dhabi’s largest real estate developer. It is a
+          secluded zone adjacent to Al Bandar on the eastern side of Al Raha
+          Beach. Boasting a mix of residential and commercial properties, Al
+          Muneera offers villas, townhouses, apartments, a commercial tower and
+          retail options. This sub-community features 1, 2, 3 & 4-bedroom
+          apartments, 4-bedroom townhouses and 5-bedroom luxury villas. There is
+          also a 12-storey commercial tower.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlMuntazah-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Muntazah</h2>
+        <p class="describtionloc">
+          Al Muntazah is a developing community in Abu Dhabi with Al Bateen
+          Executive Airport at the centre. Bound by a network of main roads, it
+          enjoys a prime waterfront location in the emirate. The community is
+          most popular for the massive Khalifa Park and the Ministries Complex.
+          From a residential perspective, living in Al Muntazah Abu Dhabi is
+          ideal for those looking for affordable villa options in Abu Dhabi.
+          Also, basic amenities like mosques, shops and family recreation
+          facilities are well within reach.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlNahda-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Nahda</h2>
+        <p class="describtionloc">
+          Al Nahda also spelt as Al Nahdah, is a residential community in Abu
+          Dhabi. Nestled along Al Ain Road (E22), Al Nahda offers a peaceful
+          retreat away from the bustling urban landscape. Divided into Al Nahdah
+          East and Al Nahdah West, the area is largely underdeveloped.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlGurm-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Gurm</h2>
+        <p class="describtionloc">
+          Al Gurm is a luxurious residential and tourist project in Abu Dhabi.
+          Master developer Aldar has put a lot of consideration into building
+          this community and making sure that the properties are unique from
+          other waterfront communities of UAE. The developers have worked
+          closely with the Urban Planning Council to ensure the community
+          strictly adheres to the 2030 development plan for Abu Dhabi. Al Gurm
+          focuses on preserving the natural resources that make Abu Dhabi unique
+          as it is nestled among mangrove forests. The main appeal of the area
+          is the waterfront lifestyle, luxurious amenities and the Al Gurm
+          Resort.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="RahaGardens-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Raha Gardens</h2>
+        <p class="describtionloc">
+          Al Raha Gardens is an ideal place to live in the capital city.
+          Stretching over 665,000 square metres, the community provides many
+          conveniences in addition to a peaceful, family-friendly lifestyle. Al
+          Raha Gardens is a serene community with modern residential units.
+          Facing the ocean, the waterfront strip is conveniently established in
+          an area which is secluded but also has easy access to some central
+          localities of the emirate. Mainly boasting villas and townhouses, Al
+          Raha Gardens offers an unparalleled living experience to the
+          residents. With various facilities at hand, the community members
+          enjoy their lives in the neighbourhood. One benefit of living here is
+          that the residents do not have to leave the premises for day-to-day
+          necessities.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlRahaBeach-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Raha Beach</h2>
+        <p class="describtionloc">
+          Al Raha Beach, a vibrant community, offers luxurious waterfront living
+          at its best, boasting an impressive 5.2 million sq. m. of natural
+          beach shoreline. Al Raha Beach is one of the popular areas to rent
+          high-end apartments in Abu Dhabi. Boasting a premium mix of
+          residential and commercial properties, the development is also home to
+          the top-favorite's tourist attraction, Al Raha Beach Hotel. This area
+          guide explores how Raha Beach offers a balanced lifestyle to those
+          seeking a deluxe community that’s complete with entertainment, culture
+          and world-class amenities.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="GolfGardens-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Golf Gardens</h2>
+        <p class="describtionloc">
+          Golf Gardens is a residential community in Khalifa City. The gated
+          community is developed by the renowned Aldar Properties. Premium
+          villas and townhouses in the cluster feature modern designs. Another
+          highlight of Golf Gardens is its proximity to popular locations such
+          as Al Raha Beach and The Westin Abu Dhabi Golf Resort and Spa.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlRahba-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Rahba</h2>
+        <p class="describtionloc">
+          Al Rahba is a development featuring residential, retail and
+          recreational facilities. Its ideal location connects residents to
+          various popular neighbourhoods in Abu Dhabi. The community is an ideal
+          choice for those who travel to Dubai frequently. Also, Al Rahba houses
+          many amenities including schools, clinics and supermarkets for a
+          comfortable living.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlRawdah-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Rawdah</h2>
+        <p class="describtionloc">
+          Al Rawdah is one of the most sought-after residential areas of Abu
+          Dhabi. The upscale residences are equipped with all the essential
+          amenities required to live a peaceful life. The neighbourhood promotes
+          family-friendly living with schools, medical facilities, supermarkets
+          and leisure spots in proximity. Al Rawdah is home to the famous Zayed
+          Sports City and the largest mosque of the UAE, Sheikh Zayed Grand
+          Mosque. The well-connected road system, communal parks and embassies
+          of different estates are other features of the community.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlReef-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Reef</h2>
+        <p class="describtionloc">
+          Al Reef, home to over 15,000 residents, is a pivotal housing project
+          catering to the mid-income bracket of Abu Dhabi’s society. Located on
+          the outskirts of the main island, Al Reef is has grown into an
+          investment hotspot over the years, making a definitive mark in the Abu
+          Dhabi real estate market.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlReem-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Reem Island</h2>
+        <p class="describtionloc">
+          Al Reem Island is one of the fastest-developing neighbourhoods in Abu
+          Dhabi. Dotted with several residential and retail options, the island
+          has become one of the most in-demand locations in Abu Dhabi in a short
+          span of time. Potential residents have an array of property types on
+          Al Reem Island Abu Dhabi to choose from – luxury penthouses,
+          apartments and stunning waterfront villas.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlSamha-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Samha</h2>
+        <p class="describtionloc">
+          Al Samha is gradually gaining prominence in the capital’s real estate
+          market. Properties in Samha Abu Dhabi are noteworthy for their
+          aesthetically pleasing designs and serene surroundings. AL Samha Abu
+          Dhabi is a development with various residential, recreational and
+          retail services. Centrally located between Abu Dhabi and Dubai, as
+          well as near the rapidly growing investment zone KIZAD and Khalifa
+          Port, it will be an ideal choice for people who have to travel from
+          one emirate to another for work.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlShahama-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Shahama</h2>
+        <p class="describtionloc">
+          Al Shahama Area, which includes the existing communities of Shahama
+          and Bahia , is identified in Plan Abu Dhabi 2030 as a portal to the
+          city of Abu Dhabi, characterized by outstanding buildings, landscape
+          design, monuments and signage. The area is strategically positioned
+          along the junction between the E10 and E11 Highways that carry traffic
+          between Abu Dhabi and Dubai..
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlShamkha-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Shamkha</h2>
+        <p class="describtionloc">
+          Al Shamkha is one of the most popular freehold areas in Abu Dhabi.
+          Some areas around the community were redeveloped in 2016. The
+          Municipality of Abu Dhabi and Abu Dhabi Housing Authority has overseen
+          the development of residential plots within the area. Many projects
+          are still under development and should be completed soon as Al Shamkha
+          is part of the strategic 2030 vision for Abu Dhabi. Due to the recent
+          construction, many communal facilities such as schools, commercial
+          spaces, health facilities, parks, entertainment options, cycle lanes
+          and mosques have been added.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlRiyadh-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Riyadh</h2>
+        <p class="describtionloc">
+          Al Riyadh is set to be a large mixed-use hub with villas and
+          apartments, commercial properties, malls, restaurants, schools,
+          clinics, hospitals and parks. With an arterial road right beside the
+          community, individuals can easily travel to other areas in Abu
+          Dhabi.Previously known as Al Shamkha South, Madinat Al Riyadh is a
+          mixed-use area in Abu Dhabi. It encompasses around 8,000 hectares of
+          land featuring a variety of residential and commercial properties,
+          along with clinics, hospitals, schools, mosques, malls and parks.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlShawamekh-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Shawamekh</h2>
+        <p class="describtionloc">
+          Al shawamekh city is a major residential development area located on
+          the mainland it makes it convenient for those commuting to Al Ain or
+          Dubai and central Abu Dhabi is also easily reachable within a 30
+          minutes’ drive. It is intended to relieve the crowding and provide new
+          housing and a fresh city for families.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlSilaa-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Silaa</h2>
+        <p class="describtionloc">
+          Silaa is a city in the Western Region of the Emirate of Abu Dhabi, the
+          United Arab Emirates. It is 350 kilometres west of Abu Dhabi and 450
+          kilometres west of Dubai, mainly consisting of Emirati town houses.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlWathba-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Wathba</h2>
+        <p class="describtionloc">
+          Al Wathba is a developing community in the emirate of Abu Dhabi. Here,
+          one can spot key cultural attractions and landmarks including Sheikh
+          Zayed Heritage Festival and Wathba Wetland Reserve. The development
+          started back in 2008 and today, one can find a few villas while most
+          of the residential area is under construction. Moreover, it is
+          well-connected to the network of main highways.Wathba Abu Dhabi,
+          despite being away from the emirate’s central districts is turning
+          into a sought-after neighbourhood. It is the centre of attention,
+          especially during the festive season. Moreover, the residential area
+          will have several properties.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="Baniyas-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Baniyas</h2>
+        <p class="describtionloc">
+          Baniyas Abu Dhabi is a mixed-use gated community featuring mid-to
+          high-rise apartment buildings. The area is spread across 108 hectares
+          of land and is one of the first luxurious developments in the city.
+          The community aims to boost the leisure, commercial and tourism
+          sectors of Baniyas. Some famous tourist spots such as Sheikh Zayed
+          Grand Mosque, Sheikh Zayed Cricket Stadium and Ferrari World are not
+          far from the city. Bawabat Al Sharq is a well-known villa community in
+          Baniyas.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="HydraVillage-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Hydra Village</h2>
+        <p class="describtionloc">
+          Hydra Village Abu Dhabi is a leasehold development on Highway 11, that
+          connects Abu Dhabi and Dubai around 20 km from Abu Dhabi International
+          Airport. Officially launched in the year 2006, the project was
+          completed in December 2012 as a project of Hydra Properties LLC, a
+          privately owned real estate in Abu DhabiThe villas in Hydra Village
+          are arranged in a series where each unit is connected to the other.
+          With a major focus on functionality, these houses have minimalistic
+          architectural designs and interior finishing. What makes the
+          properties distinctive are the delightful citrusy shades that they are
+          painted with.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="Khalifa-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Khalifa City</h2>
+        <p class="describtionloc">
+          Khalifa City A is on the main highway to Dubai and lies about 30
+          kilometers from Abu Dhabi. It is close to Abu Dhabi International
+          Airport. Khalifa City A is further inland and is near BaniYas and Al
+          Shawamikh. Khalifa City is a destination for residents who wish to
+          stay away from the daily traffic and crowd of Abu Dhabi downtown.
+          People who live there enjoy the quite community and access to gyms,
+          recreation facilities, large gardens and parking.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="Shakhbout-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Shakhbout</h2>
+        <p class="describtionloc">
+          Shakhbout City, formerly known as Khalifa City B, is a major
+          residential development in Abu Dhabi mainland, approximately 30km from
+          the Abu Dhabi Island CBD, northeast of Mohammed Bin Zayed City and
+          south of Abu Dhabi International Airport.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="MohamedBinZayed-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Mohamed Bin Zayed</h2>
+        <p class="describtionloc">
+          Mohammed Bin Zayed City is more commonly referred to as MBZ City or
+          Zayed City. The community is a quiet area located on the edge of Abu
+          Dhabi. The area is almost completely developed with only a few
+          apartment buildings and residential plots under construction. Many UAE
+          residents (especially families) are turning to this promising area due
+          to its proximity to the happening emirate of Dubai and the variety of
+          housing options available to all.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="MadinetZayed-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Madinet Zayed</h2>
+        <p class="describtionloc">
+          Madinat Zayed is a town in the Emirate of Abu Dhabi, in the United
+          Arab Emirates. It's known for the annual Al Dhafra Festival, featuring
+          a camel beauty pageant, races and a traditional market. East of town
+          is Mantiqa al-Sirra, the remains of a mud-brick fort where
+          centuries-old ceramics were recovered. Farther south are the oasis
+          town of Liwa and the vast desert expanse of the Empty Quarter.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="Liwa-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Liwa</h2>
+        <p class="describtionloc">
+          Liwa is located in the heart of the Dafra region. It is known as the
+          Citadel of the Good Bedouin, an oasis full of kindness, grace and
+          generosity. Originality is a virgin, in which nostalgia draws you
+          strongly. It receives special attention from the Governor of the
+          Principality. The population of Liwa is divided into three species
+          (Bedouins, islanders, farm owners). Years ago, Liwa became a modern,
+          integrated city with all the necessary services.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="Masdar-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Masdar City</h2>
+        <p class="describtionloc">
+          Masdar City is an urban community in Abu Dhabi, the capital of the
+          United Arab Emirates. It was built by Masdar, a subsidiary of the
+          state-owned Mubadala Investment Company, with the majority of seed
+          capital provided by the Governm
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="Musaffah-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Musaffah</h2>
+        <p class="describtionloc">
+          Musaffah is an industrial town to the southwest of Abu Dhabi, United
+          Arab Emirates. Also known as Musaffah Sanaiya, it is one of the most
+          important economic areas of the United Arab Emirates and has been
+          designated a special economic zone, with numerous factories and port.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlNareel-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Nareel Island</h2>
+        <p class="describtionloc">
+          Al Nareel Island is a Plot Sales Development exclusively reserved for
+          UAE Nationals. It is Located off the Capital's coast in Al Bateen,
+          Nareel invites the UAE's elite to create a personal legacy through a
+          unique opportunity to purchase land and build a home for generations
+          to come. Nareel will be home to a tranquil yet active neighborhood
+          with a swimming lagoon, club house and open parks across the Island.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="Ramhan-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Ramhan Island</h2>
+        <p class="describtionloc">
+          Ramhan Island Beautiful, raw and untouched, Ramhan is a naturally
+          shaped heavenly island, located in Abu Dhabi. It carries all the charm
+          of nature from bays and mangrove trees. The incredibly designed
+          masterplan offers waterfront luxury villas with high-end amenities, a
+          world-class Marina with state-of-the-art shopping and fine dining
+          experiences, unrivaled hospitality with a luxurious hotel and serviced
+          residence, besides a tranquil wellness center amidst serene
+          surroundings and open bay views.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="AlSaadiyat-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Al Saadiyat Island</h2>
+        <p class="describtionloc">
+          Al Saadiyat Island is a tourism-cultural project for nature and
+          Emirati heritage and culture. The project, under development, consists
+          of a large, low-lying island. A mixed commercial, residential, and
+          leisure project is currently under construction on the island.
+          Saadiyat Island is expected to become Abu Dhabi's cultural centre,
+          mostly for the Island’s Cultural District that is expected to include
+          eight museums.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="SasAlNakheel-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Sas Al Nakheel</h2>
+        <p class="describtionloc">
+          Sas Al Nakhl Village is a peaceful gated community in the capital
+          city. It is a villa-only community and one of the best and
+          well-established regions on the crossroads close to Abu Dhabi – Al Ain
+          Road. The area caters to all the basic needs of residents and offers a
+          family-friendly lifestyle.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="Yas-sale">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="h2 section-title">Yas Island</h2>
+        <p class="describtionloc">
+          Yas Island is an island in Abu Dhabi, United Arab Emirates. The
+          island’s development project was initiated in 2006 by Abu Dhabi-based
+          Aldar Properties, with the aim of turning the island into a
+          multi-purpose leisure, shopping and entertainment center at an
+          estimated total cost of over billion.
+        </p>
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".slide-container", {
+        slidesPerView: 3,
+        spaceBetween: 15,
+        sliderPerGroup: 3,
+        centerSlide: "true",
+        fade: "true",
+        grabCursor: "true",
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          dynamicBullets: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          550: {
+            slidesPerView: 1,
+          },
+          770: {
+            slidesPerView: 2,
+          },
+          1000: {
+            slidesPerView: 2,
+          },
+          1050: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    </script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Define the section IDs and corresponding cities
+        const sections = [
+          { id: "AbuDhabi-sale", city: "Abu Dhabi City" },
+          { id: "Rabdan-sale", city: "Rabdan" },
+          { id: "AlAjban-sale", city: "Al Ajban" },
+          { id: "AlBahia-sale", city: "Al Bahia" },
+          { id: "AlAryam-sale", city: "Al Aryam" },
+          { id: "AlFalah-sale", city: "Al Falah City" },
+          { id: "AlFaya-sale", city: "Al Faya" },
+          { id: "AlGhadeer-sale", city: "Al Ghadeer" },
+          { id: "AlHudairiyat-sale", city: "Al Hudairiyat Island" },
+          { id: "AlKhatim-sale", city: "Al Khatim" },
+          { id: "AlKhaznah-sale", city: "Al Khaznah" },
+          { id: "AlMafraq-sale", city: "Al Mafraq" },
+          { id: "AlMaria-sale", city: "Al Maria Island" },
+          { id: "AlMirfa-sale", city: "Al Mirfa" },
+          { id: "AlMuneera-sale", city: "Al Muneera" },
+          { id: "AlMuntazah-sale", city: "Al Muntazah" },
+          { id: "AlNahda-sale", city: "Al Nahda" },
+          { id: "AlGurm-sale", city: "Al Gurm" },
+          { id: "AlRahaGardens-sale", city: "Al Raha Gardens" },
+          { id: "AlRahaBeach-sale", city: "Al Raha Beach" },
+          { id: "RahaGolfGardens-sale", city: "Golf Gardens" },
+          { id: "AlRahba-sale", city: "Al Rahba" },
+          { id: "AlRawdah-sale", city: "Al Rawdah" },
+          { id: "AlReef-sale", city: "Al Reef" },
+          { id: "AlReem-sale", city: "Al Reem Island" },
+          { id: "AlSamha-sale", city: "Al Samha" },
+          { id: "AlShahama-sale", city: "Al Shahama" },
+          { id: "AlShamkha-sale", city: "Al Shamkha" },
+          { id: "AlRiyadh-sale", city: "Al Riyadh" },
+          { id: "AlShawamekh-sale", city: "Al Shawamekh" },
+          { id: "AlSilaa-sale", city: "Al Silaa" },
+          { id: "AlWathba-sale", city: "Al Wathba" },
+          { id: "Baniyas-sale", city: "Baniyas" },
+          { id: "HydraVillage-sale", city: "Hydra Village" },
+          { id: "Khalifa-sale", city: "Khalifa City" },
+          { id: "Shakhbout-sale", city: "Shakhbout" },
+          { id: "MohamedBinZayed-sale", city: "Mohamed Bin Zayed" },
+          { id: "MadinetZayed-sale", city: "Madinet Zayed" },
+          { id: "Liwa-sale", city: "Liwa" },
+          { id: "Masdar-sale", city: "Masdar City" },
+          { id: "Musaffah-sale", city: "Musaffah" },
+          { id: "AlNareel-sale", city: "Al Nareel Island" },
+          { id: "Ramhan-sale", city: "Ramhan Island" },
+          { id: "AlSaadiyat-sale", city: "Al Saadiyat Island" },
+          { id: "SasAlNakheel-sale", city: "Sas Al Nakheel" },
+          { id: "Yas-sale", city: "Yas Island" },
+
+          // Add more sections as needed
+        ];
+
+        // Fetch properties for each section
+        sections.forEach((section) => {
+          fetchProperties(section.id, section.city);
+        });
+      });
+
+      // Function to fetch properties for a specific section
+      function fetchProperties(sectionId, city) {
+        const host = "https://real-estate-backend-9d9v.onrender.com";
+        fetch(`${host}/property/search?propertyFor=Sale&propertyPage=Sale`)
+          .then((response) => response.json())
+          .then((data) => {
+            // Call a function to generate property cards for the specific section
+            createPropertyCards(sectionId, data.properties);
+          })
+          .catch((error) =>
+            console.error(`Error fetching properties for ${city}:`, error)
+          );
+      }
+
+      // Function to create property cards for a specific section
+      function createPropertyCards(sectionId, data) {
+        const propertyList = document
+          .getElementById(sectionId)
+          .querySelector(".property-list");
+        const host = "https://real-estate-backend-9d9v.onrender.com";
+
+        data.forEach((property) => {
+          // Check if the property belongs to the current section
+          if (property.propertySection === sectionId) {
+            const listItem = document.createElement("li");
+            listItem.classList.add("swiper-slide"); // Add swiper-slide class to the li element
+            const websiteUrl = "http://127.0.0.1:5500/property.html?id=";
+            const websiteurlDetails =
+              "details.html?id=";
+            listItem.innerHTML = `
+        <div class="property-card">
+            <figure class="card-banner">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  ${property.propertyPictures
+                    .map(
+                      (img) => `
+                    <div class="swiper-slide">
+                      <img src="${host}/images/${img}" alt="${property.propertyType}" class="w-100" />
+                    </div>
+                  `
+                    )
+                    .join("")}
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </figure>
+            <div class="card-content">
+              <h3 class="h3 card-title"><a href="#">${
+                property.propertyType
+              }</a></h3>
+              <div class="card-price">
+                <span style="display: inline;">AED</span>
+                <strong>${property.propertyPrice.toLocaleString('en')}</strong> /Year</div>
+              <p class="card-text">${property.propertyDescription}</p>
+              <a href ="${websiteurlDetails}${property.id}">View details<a/>
+              <ul class="card-list">
+                <li class="card-item">
+                  <strong>${property.bedrooms}</strong>
+                  <ion-icon name="bed-outline"></ion-icon>
+                  <span>Bedrooms</span>
+                </li>
+                <li class="card-item">
+                  <strong>${property.bathrooms}</strong>
+                  <ion-icon name="man-outline"></ion-icon>
+                  <span>Bathrooms</span>
+                </li>
+                <li class="card-item">
+                  <strong>${property.propertySize.toLocaleString('en')}</strong>
+                  <ion-icon name="square-outline"></ion-icon>
+                  <span>Square Ft</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <div class="card-author">
+                <figure class="author-avatar">
+                  <img src="logo.jpeg" style="width: 60px;
+                  height: 35px;" alt="${
+                    property.createdBy.name
+                  }" class="w-100" />
+                </figure>
+                <div>
+                  <p class="author-name"><a href="#">${
+                    property.createdBy.name
+                  }</a></p>
+                  <p class="author-title">Real Estate Agent</p>
+                </div>
+              </div>
+              <div class="card-footer-actions">                  
+                  <a href="https://wa.me/+971566702470?text=${websiteUrl}${
+              property.id
+            }" target="_blank">
+                    <button class="card-footer-actions-btn">
+                  <i class="fab fa-whatsapp">
+                  </i>Whatshapp
+                  </button></a>
+                  <a href="tel:+971566702470">
+                  <button class="card-footer-actions-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="14" width="14" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+                    Call</button></a> 
+              </div>
+            </div>
+          </div>
+        `;
+            propertyList.appendChild(listItem);
+          }
+        });
+
+        // Initialize swiper for this section
+        var swiper = new Swiper(`#${sectionId} .mySwiper`, {
+          grabCursor: true,
+          pagination: {
+            el: `#${sectionId} .swiper-pagination`,
+          },
+          navigation: {
+            nextEl: `#${sectionId} .swiper-button-next`,
+            prevEl: `#${sectionId} .swiper-button-prev`,
+          },
+        });
+      }
+    </script>
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-brand">
+            <p class="footer-list-title">MASAR</p>
+
+            <!-- <a href="#" class="logo">
+          <img src="imgs/aa643105-4d9b-44fa-921f-8ffc75b6dfa2.jpg" alt="Homeverse logo" style="width: 200px;">
+        </a> -->
+
+            <p class="section-text">
+              MASAR can ensure that securing your dream home will be a smooth
+              process whether you wish to Buy or Rent from the primary or
+              secondary market.
+            </p>
+
+            <ul class="contact-list">
+              <li>
+                <a href="#" class="contact-link">
+                  <ion-icon name="location-outline"></ion-icon>
+
+                  <address>Brooklyn, New York, United States</address>
+                </a>
+              </li>
+
+              <li>
+                <a href="tel:tel:+971566702470" class="contact-link">
+                  <ion-icon name="call-outline"></ion-icon>
+
+                  <span>tel:+971 56 670 2470</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="contact-link">
+                  <ion-icon name="mail-outline"></ion-icon>
+
+                  <span>contact@Masar.com</span>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="social-list">
+              <li>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61556005683471&mibextid=ZbWKwL"
+                  class="social-link"
+                  target="_blank"
+                >
+                  <ion-icon
+                    name="logo-facebook"
+                    style="font-size: 30px"
+                  ></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link" target="_blank">
+                  <ion-icon
+                    name="logo-twitter"
+                    style="font-size: 30px"
+                  ></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.tiktok.com/@masar_real_estate?is_from_webapp=1&sender_device=pc"
+                  class="social-link"
+                  target="_blank"
+                >
+                  <ion-icon
+                    name="logo-TikTok"
+                    style="font-size: 30px"
+                  ></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link" target="_blank">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    width="30"
+                    height="30"
+                    viewBox="0,0,256,256"
+                  >
+                    <g
+                      fill="#ffffff"
+                      fill-rule="nonzero"
+                      stroke="none"
+                      stroke-width="1"
+                      stroke-linecap="butt"
+                      stroke-linejoin="miter"
+                      stroke-miterlimit="10"
+                      stroke-dasharray=""
+                      stroke-dashoffset="0"
+                      font-family="none"
+                      font-weight="none"
+                      font-size="none"
+                      text-anchor="none"
+                      style="mix-blend-mode: normal"
+                    >
+                      <g transform="scale(8,8)">
+                        <path
+                          d="M18.5,2c-7.75,0 -12.5,9.25 -12.5,14c0,0 3.25,-12 13,-12c3.625,0 6,2 6,2c0,0 -1,-4 -6.5,-4zM17.5,7c-1.933,0 -3.5,1.567 -3.5,3.5c0,1.933 1.567,3.5 3.5,3.5c1.933,0 3.5,-1.567 3.5,-3.5c0,-1.933 -1.567,-3.5 -3.5,-3.5zM20,16c0,0 -1,1 -5,1v10.5c0,1.381 1.119,2.5 2.5,2.5c1.381,0 2.5,-1.119 2.5,-2.5z"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://accounts.snapchat.com/v2/welcome"
+                  class="social-link"
+                  target="_blank"
+                >
+                  <ion-icon
+                    name="logo-snapchat"
+                    style="font-size: 30px"
+                  ></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.instagram.com/masar.realestate.ae?igsh=MWY0bGRtYWw2cm1oZA=="
+                  class="social-link"
+                  style="font-size: 30px"
+                  target="_blank"
+                >
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/101589068/admin/feed/posts/?feedType=following"
+                  class="social-link"
+                  target="_blank"
+                >
+                  <ion-icon
+                    name="logo-Linkedin"
+                    style="font-size: 30px"
+                  ></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.pinterest.com/Masar16/"
+                  class="social-link"
+                  target="_blank"
+                >
+                  <ion-icon
+                    name="logo-Pinterest"
+                    style="font-size: 30px"
+                  ></ion-icon>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-link-box">
+            <ul class="footer-list">
+              <li>
+                <p class="footer-list-title">Quick Link Explore</p>
+              </li>
+
+              <li>
+                <a href="rent.html" class="footer-link">Properties For Rent</a>
+              </li>
+
+              <li>
+                <a href="sale.html" class="footer-link">Properties For Sale</a>
+              </li>
+
+              <li>
+                <a href="Off-plan.html" class="footer-link">Off Plan</a>
+              </li>
+
+              <li>
+                <a href="Home.html#ex" class="footer-link">Abu Dhabi Areas</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Residential</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Commercial</a>
+              </li>
+            </ul>
+
+            <ul class="footer-list">
+              <li>
+                <p class="footer-list-title">OUR Services</p>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Buying properties</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Selling Properties</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Leasing Properties</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Evaluation</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Managment</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Investment</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Properly Consultation</a>
+              </li>
+            </ul>
+
+            <ul class="footer-list">
+              <li>
+                <p class="footer-list-title">Keep in Touch</p>
+              </li>
+
+              <form id="form3" onsubmit="validateAndSendEmail();">
+                <li>
+                  <input
+                    type="email"
+                    placeholder="Your Email here..."
+                    class="subscribe"
+                    id="email3"
+                    required
+                  />
+                </li>
+
+                <li>
+                  <input
+                    type="text"
+                    placeholder="Your Number here..."
+                    class="subscribe"
+                    id="phone3"
+                    required
+                  />
+                </li>
+
+                <li>
+                  <button
+                    type="submit"
+                    class="subscribe"
+                    style="background-color: #2a8ded; color: #ffffff"
+                  >
+                    Submit
+                  </button>
+                </li>
+              </form>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+      <script>
+        let form3 = document.getElementById("form3");
+        form3.addEventListener("submit", function (event) {
+          event.preventDefault();
+        });
+
+        function validateAndSendEmail() {
+          let phone3 = document.getElementById("phone3").value;
+          let email3 = document.getElementById("email3").value;
+
+          if (!validateEmail(email3)) {
+            alert("Please enter a valid email address.");
+            return;
+          }
+
+          if (!validatePhone(phone3)) {
+            alert("Please enter a valid phone number.");
+            return;
+          }
+
+          let body = `Email: ${email3} <br>PhoneNumber: ${phone3}`;
+          Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "basantsaed718@gmail.com",
+            Password: "233DE19F71A53AA86828631A9A3B3167E6D0",
+            To: "basantsaeed267@gmail.com",
+            From: "basantsaed718@gmail.com",
+            Subject: "New Form Submission From Your Website..",
+            Body: body,
+          }).then((message) => alert(message));
+        }
+
+        function validateEmail(email) {
+          // Basic email validation regex
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return emailRegex.test(email);
+        }
+
+        function validatePhone(phone) {
+          // Basic phone number validation regex
+          const phoneRegex = /^\d{5,20}$/;
+          return phoneRegex.test(phone);
+        }
+      </script>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

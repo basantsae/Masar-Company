@@ -1,0 +1,1999 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-SQS0DRH6FZ"
+    ></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="index.css" />
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />  //library to animate elements on your page as you scroll.-->
+    <title>Masar Company</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    /> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="WhatsApp Image 2024-01-05 at 8.33.43 PM.jpeg"
+    />
+    <style>
+      :root {
+        --swiper-theme-color: #192f63;
+        --swiper-navigation-size: 38px;
+      }
+
+      .my-class {
+        background-color: black;
+      }
+      .activeBtn {
+        background-color: black;
+        color: white;
+      }
+
+      .slide-container {
+        margin: 0 35px;
+        overflow: hidden;
+      }
+      .swiper-navBtn {
+        color: #fff;
+        height: 40px;
+        width: 40px;
+        background: #192f63;
+        border-radius: 50%;
+      }
+      .swiper-navBtn::before,
+      .swiper-navBtn::after {
+        font-size: 18px;
+      }
+
+      .swiper-pagination-bullet {
+        background-color: #000;
+      }
+      @media (max-width: 300px) {
+        .slide-container {
+          margin: 0 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div
+        class="logo"
+        style="display: inline-flex; align-items: center; gap: 5px"
+      >
+        <img src="logo.jpeg" />
+        <!-- <h1>Ma</h1> -->
+      </div>
+      <div class="navbar" id="navBar" style="background-color: #fff">
+        <div class="close-menu-button" onclick="toggleMenu();">
+          <img src="x-regular-24.png" alt="close-menu" />
+        </div>
+        <ul>
+          <li class="active" style="background-color: #192f63">
+            <a href="Home.html" style="color: #fff"
+              ><i class="fa fa-fw fa-home"></i> Home</a
+            >
+          </li>
+          <li><a href="rent.html">Rent</a></li>
+          <li><a href="sale.html">Sale</a></li>
+          <li><a href="Off-plan.html">Off Plan</a></li>
+          <li><a href="addproperty.html">Add your Property</a></li>
+          <li><a href="contactus.html">Contact US</a></li>
+        </ul>
+      </div>
+      <div class="menu-button" onclick="toggleMenu()">
+        <img src="menu-regular-24.png" alt="open-menu" />
+      </div>
+    </nav>
+
+    <!-- home-background section -->
+    <section class="home-background">
+      <div class="background-detail">
+        <img
+          class="background-img"
+          src="aerial-view-city-by-water_23-2150893061.jpg"
+          style="width: 100%"
+        />
+        <div class="centered">
+          <h1>ARE YOU READY TO FIND YOUR PERFECT HOME IN ABU DHABI?</h1>
+          <h1>KEEP IN TOUCH.....</h1>
+        </div>
+      </div>
+    </section>
+
+    <!--  Form section ------------------------------------------------------------------------------------------------------>
+    <section>
+      <div class="login-popup">
+        <div class="box">
+          <div class="img-area">
+            <div class="img">
+              <img
+                src="WhatsApp Image 2024-01-05 at 8.33.43 PM.jpeg"
+                style="width: 400px; height: 350px"
+              />
+            </div>
+            <p style="position: relative; top: 40px">
+              If you are looking to Buy, Sell, Rent or would just like a chat
+              regarding your property requirements please feel free to contact
+              us or fill this form
+            </p>
+          </div>
+          <div class="form">
+            <div class="close">&times;</div>
+            <h1>Contact Us</h1>
+
+            <form id="form2" onsubmit="validateAndSendEmail1();">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="name"
+                  class="form-control"
+                  placeholder="Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="phone"
+                  class="form-control"
+                  placeholder="PhoneNumber"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  id="message"
+                  class="form-control"
+                  placeholder="What would you like to tell us.."
+                />
+              </div>
+              <button class="btn" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        const loginPopup = document.querySelector('.login-popup');
+        const close = document.querySelector('.close');
+
+        window.addEventListener('load', function () {
+          const hasPopupBeenShown = sessionStorage.getItem('popupShown');
+
+          if (!hasPopupBeenShown) {
+            setTimeout(function () {
+              showPopup();
+              sessionStorage.setItem('popupShown', 'true');
+            }, 5000);
+          }
+        });
+
+        function showPopup() {
+          loginPopup.classList.add('show');
+
+          close.addEventListener('click', function () {
+            loginPopup.classList.remove('show');
+          });
+        }
+
+        let form = document.getElementById('form2');
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+        });
+      </script>
+
+      <script src=" https://smtpjs.com/v3/smtp.js"></script>
+      <script>
+        function validateAndSendEmail1() {
+          let name = document.getElementById('name').value;
+          let phone = document.getElementById('phone').value;
+          let email = document.getElementById('email').value;
+          let message = document.getElementById('message').value;
+
+          if (!validateEmail(email)) {
+            alert('Please enter a valid email address.');
+            return;
+          }
+
+          if (!validatePhone(phone)) {
+            alert('Please enter a valid phone number.');
+            return;
+          }
+          sendEmail1();
+        }
+
+        function sendEmail1() {
+          let name = document.getElementById('name').value;
+          let phone = document.getElementById('phone').value;
+          let email = document.getElementById('email').value;
+          let message = document.getElementById('message').value;
+
+          let body = `Name :${name} <br> PhoneNumber :${phone} <br> Email :${email} <br> Message :${message}`;
+          Email.send({
+            Host: 'smtp.elasticemail.com',
+            Username: 'basantsaed718@gmail.com',
+            Password: '233DE19F71A53AA86828631A9A3B3167E6D0',
+            To: 'basantsaeed267@gmail.com',
+            From: 'basantsaed718@gmail.com',
+            Subject: 'New Form Submission From Your Website..',
+            Body: body,
+          }).then((message) => alert(message));
+        }
+      </script>
+    </section>
+
+    <!-- Home Search section ---------------------------------------------------------------------------------------------->
+    <section class="section2">
+      <div class="chosen">
+        <button id="all-btn" class="btnsea activeBtn">All Status</button>
+        <button id="rent-btn" class="btnsea">FOR Rent</button>
+        <button id="sales-btn" class="btnsea">FOR Sale</button>
+      </div>
+
+      <div class="search-container" id="search-container-all">
+        <div class="btn-search" id="btn-search-1" onclick="">
+          <div class="btntext"><h4>LOOKING FOR</h4></div>
+          <div class="select-btn">
+            <span>Property Type</span>
+            <i class="uil uil-angle-down"></i>
+          </div>
+          <div class="content-search">
+            <div class="search">
+              <i class="uil uil-search"></i>
+              <input spellcheck="false" type="text" placeholder="Search" />
+            </div>
+            <ul class="options-search"></ul>
+          </div>
+
+          <script>
+            const wrapper1 = document.querySelector('#btn-search-1'),
+              selectBtn1 = wrapper1.querySelector('.select-btn'),
+              searchInp1 = wrapper1.querySelector('input'),
+              options1 = wrapper1.querySelector('.options-search');
+
+            let countries1 = [
+              'Off-plan',
+              'Commercial Land',
+              'Industrial Land',
+              'Villa',
+              'Farm',
+              'Commercial Villa',
+              'Town House',
+              'Residential Building',
+              'Commercial Building',
+              'Shop',
+              'Office',
+              'Showroom',
+              'Business Center',
+              'Apartment',
+              'Compound',
+              'Hotal Apartments',
+              'Bunglow',
+              'Factory',
+              'Staff Accommodation',
+              'Ware House',
+              'Comp',
+            ];
+
+            function addCountry1(selectedCountry1) {
+              options1.innerHTML = '';
+              countries1.forEach((country1) => {
+                let isSelected1 =
+                  country1 == selectedCountry1 ? 'selected' : '';
+                let li1 = `<li onclick="updateName1(this)" class="${isSelected1}">${country1}</li>`;
+                options1.insertAdjacentHTML('beforeend', li1);
+              });
+            }
+            addCountry1();
+
+            function updateName1(selectedLi1) {
+              searchInp1.value = '';
+              addCountry1(selectedLi1.innerText);
+              wrapper1.classList.remove('active');
+              selectBtn1.firstElementChild.innerText = selectedLi1.innerText;
+            }
+
+            searchInp1.addEventListener('keyup', () => {
+              let arr1 = [];
+              let searchWord1 = searchInp1.value.toLowerCase();
+              arr1 = countries1
+                .filter((data1) => {
+                  return data1.toLowerCase().includes(searchWord1);
+                })
+                .map((data1) => {
+                  let isSelected1 =
+                    data1 == selectBtn1.firstElementChild.innerText
+                      ? 'selected'
+                      : '';
+                  return `<li onclick="updateName1(this)" class="${isSelected1}">${data1}</li>`;
+                })
+                .join('');
+              options1.innerHTML = arr1
+                ? arr1
+                : `<p style="margin-top: 10px;">Oops! PropertyType not found</p>`;
+            });
+
+            selectBtn1.addEventListener('click', () =>
+              wrapper1.classList.toggle('active')
+            );
+          </script>
+        </div>
+
+        <div class="btn-search" id="btn-search-2">
+          <div class="btntext"><h4>LOCATION</h4></div>
+          <div class="select-btn">
+            <span>ALL Location</span>
+            <i class="uil uil-angle-down"></i>
+          </div>
+          <div class="content-search">
+            <div class="search">
+              <i class="uil uil-search"></i>
+              <input spellcheck="false" type="text" placeholder="Search" />
+            </div>
+            <ul class="options-search"></ul>
+          </div>
+          <script>
+            const wrapper = document.querySelector('#btn-search-2'),
+              selectBtn = wrapper.querySelector('.select-btn'),
+              searchInp = wrapper.querySelector('input'),
+              options = wrapper.querySelector('.options-search');
+
+            let countries = [
+              'Rabdan',
+              'Al Ajban',
+              'Al Bahia',
+              'Al Aryam',
+              'Al Falah city',
+              'Al Faya',
+              'Al Ghadeer',
+              'Al Hudairiyat Island',
+              'Al Khatim',
+              'Al Khaznah',
+              'Al Mafraq ',
+              'Al Maria Island',
+              'Al Mirfa ',
+              'Al Muneera',
+              'Al Muntazah ',
+              'Al Nahda ',
+              'Al Gurm ',
+              'Al Raha Gardens',
+              'Al Raha Beach ',
+              'Golf Gardens',
+              'Al Rahba',
+              'Al Rawdah ',
+              'Al Reef',
+              'Al Reem Island ',
+              'Al Samha',
+              'Al Shahama',
+              'Al Shamkha',
+              'Al Riyadh',
+              'Al Shawamekh',
+              'Al Silaa ',
+              'Al Wathba ',
+              'Baniyas',
+              'Hydra Village',
+              'Khalifa City',
+              'Shakhbout ',
+              'Mohamed Bin Zayed ',
+              'Madinet Zayed',
+              'Liwa',
+              'Masdar City',
+              'Musaffah ',
+              'Al Nareel Island',
+              'Ramhan Island',
+              'Al Saadiyat Island',
+              'Sas Al Nakheel ',
+              'Yas Island ',
+
+              'Al Mushrif ',
+              'Al Murror',
+              'Al Bateen',
+              'Al Karama',
+              'Al Zaab',
+              'Air Port Road',
+              'Al Dana',
+              'Al Hosn',
+              'AlKhaleej AlArabi street',
+              'Al Khaldiya ',
+              'Al Maharba',
+              'Al Manaseer',
+              'Al Manhal',
+              'Al Marina',
+              'Al Nahyan',
+              'Al Wahda',
+              'Al Zahyia',
+              'Cornich',
+              'Grand Mosque District',
+              'Khalifa Park',
+              'Tourist Club Area',
+              'Zayed Sports City',
+              'Rahman Island',
+              'Bloom Gardens',
+              'Al Jubail Island',
+              'Al Reeman',
+              'Ghantoot',
+              'Masder',
+            ];
+
+            function addCountry(selectedCountry) {
+              options.innerHTML = '';
+              countries.forEach((country) => {
+                let isSelected = country == selectedCountry ? 'selected' : '';
+                let li = `<li onclick="updateName(this)" class="${isSelected}">${country}</li>`;
+                options.insertAdjacentHTML('beforeend', li);
+              });
+            }
+            addCountry();
+
+            function updateName(selectedLi) {
+              searchInp.value = '';
+              addCountry(selectedLi.innerText);
+              wrapper.classList.remove('active');
+              selectBtn.firstElementChild.innerText = selectedLi.innerText;
+            }
+
+            searchInp.addEventListener('keyup', () => {
+              let arr = [];
+              let searchWord = searchInp.value.toLowerCase();
+              arr = countries
+                .filter((data) => {
+                  return data.toLowerCase().includes(searchWord);
+                })
+                .map((data) => {
+                  let isSelected =
+                    data == selectBtn.firstElementChild.innerText
+                      ? 'selected'
+                      : '';
+                  return `<li onclick="updateName(this)" class="${isSelected}">${data}</li>`;
+                })
+                .join('');
+              options.innerHTML = arr
+                ? arr
+                : `<p style="margin-top: 10px;">Oops! Location not found</p>`;
+            });
+
+            selectBtn.addEventListener('click', () =>
+              wrapper.classList.toggle('active')
+            );
+          </script>
+        </div>
+
+        <div class="btn-search" id="btn-search-3">
+          <div class="btntext"><h4>BEDROOMS</h4></div>
+          <div class="select-btn">
+            <input
+              type="number"
+              placeholder="Min"
+              min="0"
+              style="background-color: white; color: black"
+              id="btn-search-3a"
+            />
+            <input
+              type="number"
+              placeholder="Max"
+              min="0"
+              style="background-color: white; color: black"
+              id="btn-search-3b"
+            />
+          </div>
+        </div>
+
+        <div class="btn-search" id="btn-search-4">
+          <div class="btntext"><h4>PRICE</h4></div>
+          <div class="select-btn">
+            <input
+              type="number"
+              placeholder="Min"
+              min="0"
+              style="background-color: white; color: black"
+              id="btn-search-4a"
+            />
+            <input
+              type="number"
+              placeholder="Max"
+              min="0"
+              style="background-color: white; color: black"
+              id="btn-search-4b"
+            />
+          </div>
+        </div>
+
+        <button class="searchBtn" id="search-button1">Search</button>
+        <button class="searchBtn" id="search-button-rent" style="display: none">
+          Search
+        </button>
+        <button class="searchBtn" id="search-button-sale" style="display: none">
+          Search
+        </button>
+      </div>
+      <script>
+        document
+          .getElementById('btn-search-1')
+          .addEventListener('click', function () {
+            var div4 = document.getElementById('btn-search-2');
+            div4.classList.remove('active');
+          });
+        document
+          .getElementById('btn-search-2')
+          .addEventListener('click', function () {
+            var div5 = document.getElementById('btn-search-1');
+            div5.classList.remove('active');
+          });
+        document
+          .getElementById('btn-search-3')
+          .addEventListener('click', function () {
+            var div5 = document.getElementById('btn-search-1');
+            var div4 = document.getElementById('btn-search-2');
+            div5.classList.remove('active');
+            div4.classList.remove('active');
+          });
+        document
+          .getElementById('btn-search-4')
+          .addEventListener('click', function () {
+            var div5 = document.getElementById('btn-search-1');
+            var div4 = document.getElementById('btn-search-2');
+            div5.classList.remove('active');
+            div4.classList.remove('active');
+          });
+      </script>
+
+      <script>
+        // Function to hide all search containers
+        function hideAllSearchContainers() {
+          const searchContainers = document.querySelectorAll('.searchBtn');
+          searchContainers.forEach((container) => {
+            container.style.display = 'none';
+          });
+        }
+
+        // Function to show a specific search container
+        function showSearchContainer(containerId, ...countries1) {
+          hideAllSearchContainers();
+          const container = document.getElementById(containerId);
+          if (container) {
+            countries1 = countries1;
+            addCountry1();
+            container.style.display = 'block';
+          }
+        }
+        // Event listeners for button clicks
+        document
+          .getElementById('all-btn')
+          .addEventListener('click', function () {
+            countries1 = [
+              'Off-plan',
+              'Commercial Land',
+              'Industrial Land',
+              'Villa',
+              'Farm',
+              'Commercial Villa',
+              'Town House',
+              'Residential Building',
+              'Commercial Building',
+              'Shop',
+              'Office',
+              'Showroom',
+              'Business Center',
+              'Apartment',
+              'Compound',
+              'Hotal Apartments',
+              'Bunglow',
+              'Factory',
+              'Staff Accommodation',
+              'Ware House',
+              'Comp',
+            ];
+            showSearchContainer('search-button1', ...countries1);
+            // Remove "active" class from all buttons with the class "btnsea"
+            var allButtons = document.getElementsByClassName('activeBtn');
+            for (var i = 0; i < allButtons.length; i++) {
+              allButtons[i].classList.remove('activeBtn');
+            }
+            // Add "active" class to the clicked button
+            this.classList.add('activeBtn');
+          });
+        document
+          .getElementById('rent-btn')
+          .addEventListener('click', function () {
+            countries1 = [
+              'Commercial Land',
+              'Industrial Land',
+              'Villa',
+              'Farm',
+              'Commercial Villa',
+              'Town House',
+              'Residential Building',
+              'Commercial Building',
+              'Shop',
+              'Office',
+              'Showroom',
+              'Business Center',
+              'Apartment',
+              'Compound',
+              'Hotal Apartments',
+              'Bunglow',
+              'Factory',
+              'Staff Accommodation',
+              'Ware House',
+              'Comp',
+            ];
+            showSearchContainer('search-button-rent', ...countries1);
+            // Remove "active" class from all buttons with the class "btnsea"
+            var allButtons = document.getElementsByClassName('activeBtn');
+            for (var i = 0; i < allButtons.length; i++) {
+              allButtons[i].classList.remove('activeBtn');
+            }
+            // Add "active" class to the clicked button
+            this.classList.add('activeBtn');
+          });
+        document
+          .getElementById('sales-btn')
+          .addEventListener('click', function () {
+            countries1 = [
+              'Commercial Land',
+              'Industrial Land',
+              'Villa',
+              'Farm',
+              'Commercial Villa',
+              'Town House',
+              'Residential Building',
+              'Commercial Building',
+              'Shop',
+              'Office',
+              'Showroom',
+              'Business Center',
+              'Apartment',
+              'Compound',
+              'Hotal Apartments',
+              'Bunglow',
+              'Factory',
+              'Staff Accommodation',
+              'Ware House',
+              'Comp',
+            ];
+            showSearchContainer('search-button-sale', ...countries1);
+            // Remove "active" class from all buttons with the class "btnsea"
+            var allButtons = document.getElementsByClassName('activeBtn');
+            for (var i = 0; i < allButtons.length; i++) {
+              allButtons[i].classList.remove('activeBtn');
+            }
+            // Add "active" class to the clicked button
+            this.classList.add('activeBtn');
+          });
+      </script>
+    </section>
+
+    <!-- Why Real Estate Section ----------------------------------------------------------------------------------------->
+
+    <section class="service-sction" id="hero">
+      <div class="row">
+        <h2 class="h2 section-title">Why Masar</h2>
+      </div>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>
+              MASAR can ensure that securing your dream home will be a smooth
+              process whether you wish to Buy or Rent from the primary or
+              secondary market.
+            </h3>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>
+              If you need mortgage advice or an understanding of the
+              conveyancing process, rest assured we have you completely covered.
+            </h3>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Our advice is straight forward , honest and up to date.</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- property Section ------------------------------------------------------------------------------------------->
+    <section class="property" id="searchResult" style="display: none">
+      <div class="container-rent">
+        <p class="section-subtitle">Result</p>
+
+        <h2 class="h2 section-title">Search Results:</h2>
+
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="property1">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+
+        <h2 class="h2 section-title">Buy and Sell with Masar</h2>
+
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="property2">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+
+        <h2 class="h2 section-title">Explore Feature Properties</h2>
+
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="property" id="property3">
+      <div class="container-rent">
+        <p class="section-subtitle">Properties</p>
+
+        <h2 class="h2 section-title">
+          Explore The Most Desired Communties in Abu Dhabi
+        </h2>
+
+        <div class="container swiper">
+          <div class="slide-container">
+            <ul class="property-list swiper-wrapper"></ul>
+          </div>
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper('.slide-container', {
+        slidesPerView: 3,
+        spaceBetween: 15,
+        sliderPerGroup: 3,
+        centerSlide: 'true',
+        fade: 'true',
+        grabCursor: 'true',
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          dynamicBullets: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          550: {
+            slidesPerView: 1,
+          },
+          770: {
+            slidesPerView: 2,
+          },
+          1000: {
+            slidesPerView: 2,
+          },
+          1050: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    </script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // Define the section IDs and corresponding cities
+        const sections = [
+          {
+            id: 'property1',
+            title: 'Buy and Sell with Masar',
+            endpoint:
+              '/property/search?propertyPage=Home&propertySection=property1',
+          },
+          {
+            id: 'property2',
+            title: 'Explore Feature Properties',
+            endpoint:
+              '/property/search?propertyPage=Home&propertySection=property2',
+          },
+          {
+            id: 'property3',
+            title: 'Explore The Most Desired Communities in Abu Dhabi',
+            endpoint:
+              '/property/search?propertyPage=Home&propertySection=property3',
+          },
+          // Add more sections as needed
+        ];
+
+        // Fetch properties for each section initially
+        sections.forEach((section) => {
+          fetchProperties(section.id, section.endpoint);
+        });
+        // Add event listener to the search button
+        document
+          .getElementById('search-button1')
+          .addEventListener('click', function () {
+            // Fetch properties with search criteria
+            const propertyList = document
+              .getElementById('searchResult')
+              .querySelector('.property-list');
+            propertyList.innerHTML = '';
+            fetchProperties('null', 'null', 'all');
+
+            // Show the search result section
+            document.getElementById('searchResult').style.display = 'block';
+            document.getElementById('property1').style.display = 'none';
+            document.getElementById('property2').style.display = 'none';
+            document.getElementById('property3').style.display = 'none';
+            document.getElementById('hero').style.display = 'none';
+            document.getElementById('ex').style.display = 'none';
+          });
+
+        // Add event listener to the search button
+        document
+          .getElementById('search-button-rent')
+          .addEventListener('click', function () {
+            // Fetch properties with search criteria
+            const propertyList = document
+              .getElementById('searchResult')
+              .querySelector('.property-list');
+            propertyList.innerHTML = '';
+            fetchProperties('null', 'null', 'rent');
+
+            // Show the search result section
+            document.getElementById('searchResult').style.display = 'block';
+            document.getElementById('property1').style.display = 'none';
+            document.getElementById('property2').style.display = 'none';
+            document.getElementById('property3').style.display = 'none';
+            document.getElementById('hero').style.display = 'none';
+            document.getElementById('ex').style.display = 'none';
+          });
+
+        // Add event listener to the search button
+        document
+          .getElementById('search-button-sale')
+          .addEventListener('click', function () {
+            // Fetch properties with search criteria
+            const propertyList = document
+              .getElementById('searchResult')
+              .querySelector('.property-list');
+            propertyList.innerHTML = '';
+            fetchProperties('null', 'null', 'sale');
+
+            // Show the search result section
+            document.getElementById('searchResult').style.display = 'block';
+            document.getElementById('property1').style.display = 'none';
+            document.getElementById('property2').style.display = 'none';
+            document.getElementById('property3').style.display = 'none';
+            document.getElementById('hero').style.display = 'none';
+            document.getElementById('ex').style.display = 'none';
+          });
+      });
+
+      function fetchProperties(sectionId, endpoint, applySearchCriteria) {
+        const host = 'https://real-estate-backend-9d9v.onrender.com';
+
+        // Get selected options from the search form
+        const propertyType = document
+          .getElementById('btn-search-1')
+          .querySelector('.select-btn span').innerText; // Use innerText instead of value
+        const propertyLocation = document
+          .getElementById('btn-search-2')
+          .querySelector('.select-btn span').innerText; // Use innerText instead of value
+        const minBedrooms = document.getElementById('btn-search-3a').value; // Update ID
+        const maxBedrooms = document.getElementById('btn-search-3b').value; // Update ID
+        const minPrice = document.getElementById('btn-search-4a').value; // Update ID
+        const maxPrice = document.getElementById('btn-search-4b').value; // Update ID
+
+        // Check if all search options are empty, considering 'Property Type' and 'All Location' as empty
+        // Check if all search options are empty, excluding 'Property Type' and 'ALL Location'
+        const isSearchEmpty =
+          (!propertyType.trim() || propertyType === 'Property Type') &&
+          (!propertyLocation.trim() || propertyLocation === 'ALL Location') &&
+          !minBedrooms &&
+          !maxBedrooms &&
+          !minPrice &&
+          !maxPrice;
+
+        // Build the API URL with the selected options or fetch all properties
+        let apiUrl;
+        if (isSearchEmpty) {
+          apiUrl = `${host}${endpoint}`;
+        } else if (applySearchCriteria === 'rent') {
+          // Get selected property status
+          apiUrl = `${host}/property/search?propertyFor=Rent&`;
+          // Append parameters only if they are provided
+          if (propertyType !== 'Property Type')
+            apiUrl += `propertyType=${propertyType}&`;
+          if (propertyLocation !== 'ALL Location')
+            apiUrl += `propertyLocation=${propertyLocation}&`;
+          if (minBedrooms) apiUrl += `minBedrooms=${minBedrooms}&`;
+          if (maxBedrooms) apiUrl += `maxBedrooms=${maxBedrooms}&`;
+          if (minPrice) apiUrl += `minPrice=${minPrice}&`;
+          if (maxPrice) apiUrl += `maxPrice=${maxPrice}&`;
+
+          // Remove the trailing '&' if it exists
+          apiUrl = apiUrl.replace(/&$/, '');
+        } else if (applySearchCriteria === 'sale') {
+          // Get selected property status
+          apiUrl = `${host}/property/search?propertyFor=Sale&`;
+          // Append parameters only if they are provided
+          if (propertyType !== 'Property Type')
+            apiUrl += `propertyType=${propertyType}&`;
+          if (propertyLocation !== 'ALL Location')
+            apiUrl += `propertyLocation=${propertyLocation}&`;
+          if (minBedrooms) apiUrl += `minBedrooms=${minBedrooms}&`;
+          if (maxBedrooms) apiUrl += `maxBedrooms=${maxBedrooms}&`;
+          if (minPrice) apiUrl += `minPrice=${minPrice}&`;
+          if (maxPrice) apiUrl += `maxPrice=${maxPrice}&`;
+
+          // Remove the trailing '&' if it exists
+          apiUrl = apiUrl.replace(/&$/, '');
+        } else {
+          // Get selected property status
+          apiUrl = `${host}/property/search?`;
+          // Append parameters only if they are provided
+          if (propertyType !== 'Property Type')
+            apiUrl += `propertyType=${propertyType}&`;
+          if (propertyLocation !== 'ALL Location')
+            apiUrl += `propertyLocation=${propertyLocation}&`;
+          if (minBedrooms) apiUrl += `minBedrooms=${minBedrooms}&`;
+          if (maxBedrooms) apiUrl += `maxBedrooms=${maxBedrooms}&`;
+          if (minPrice) apiUrl += `minPrice=${minPrice}&`;
+          if (maxPrice) apiUrl += `maxPrice=${maxPrice}&`;
+
+          // Remove the trailing '&' if it exists
+          apiUrl = apiUrl.replace(/&$/, '');
+        }
+
+        // Fetch properties
+        fetch(apiUrl)
+          .then((response) => response.json())
+          .then((data) => {
+            // Call a function to generate property cards for the specific section
+
+            createPropertyCards(sectionId, data.properties, isSearchEmpty);
+          })
+          .catch((error) =>
+            console.error(`Error fetching properties for ${sectionId}:`, error)
+          );
+      }
+
+      // Function to create property cards for a specific section
+      function createPropertyCards(sectionId, data, isSearchEmpty) {
+        const propertyList = document
+          .getElementById(!isSearchEmpty ? 'searchResult' : sectionId)
+          .querySelector('.property-list');
+        const host = 'https://real-estate-backend-9d9v.onrender.com';
+
+        // Function to generate a random ID
+        function generateRandomId() {
+          return 'id' + Math.random().toString(36).substr(2, 9);
+        }
+        console.log(data);
+
+        data.forEach((property) => {
+          // Check if the property belongs to the current section
+
+          const listItem = document.createElement('li');
+          listItem.classList.add('swiper-slide'); // Add swiper-slide class to the li element
+          const websiteUrl = 'http://127.0.0.1:5500/property.html?id=';
+          const websiteurlDetails = 'details.html?id=';
+          listItem.innerHTML = `
+        <div class="property-card">
+            <figure class="card-banner">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  ${property.propertyPictures
+                    .map(
+                      (img) => `
+                    <div class="swiper-slide">
+                      <img src="${host}/images/${img}" alt="${property.propertyType}" class="w-100" />
+                    </div>
+                  `
+                    )
+                    .join('')}
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </figure>
+            <div class="card-content">
+              <h3 class="h3 card-title"><a href="#">${
+                property.propertyType
+              }</a></h3>
+              <div class="card-price">
+                <span style="display: inline;">AED</span>
+                <strong>${property.propertyPrice.toLocaleString(
+                  'en'
+                )}</strong> /Year</div>
+              <p class="card-text">${property.propertyDescription}</p>
+              <a href ="${websiteurlDetails}${property.id}">View details<a/>
+              <ul class="card-list">
+                <li class="card-item">
+                  <strong>${property.bedrooms}</strong>
+                  <ion-icon name="bed-outline"></ion-icon>
+                  <span>Bedrooms</span>
+                </li>
+                <li class="card-item">
+                  <strong>${property.bathrooms}</strong>
+                  <ion-icon name="man-outline"></ion-icon>
+                  <span>Bathrooms</span>
+                </li>
+                <li class="card-item">
+                  <strong>${property.propertySize.toLocaleString('en')}</strong>
+                  <ion-icon name="square-outline"></ion-icon>
+                  <span>Square Ft</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <div class="card-author">
+                <figure class="author-avatar">
+                  <img src="logo.jpeg" style="width: 60px;
+                  height: 35px;" alt="${
+                    property.createdBy.name
+                  }" class="w-100" />
+                </figure>
+                <div>
+                  <p class="author-name"><a href="#">${
+                    property.createdBy.name
+                  }</a></p>
+                  <p class="author-title">Real Estate Agent</p>
+                </div>
+              </div>
+              <div class="card-footer-actions">                  
+                  <a href="https://wa.me/+971566702470?text=${websiteUrl}${
+            property.id
+          }" target="_blank">
+                    <button class="card-footer-actions-btn">
+                  <i class="fab fa-whatsapp">
+                  </i>Whatshapp
+                  </button></a>
+                  <a href="tel:+971566702470">
+                  <button class="card-footer-actions-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="14" width="14" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+                    Call</button></a>
+              </div>
+            </div>
+          </div>
+        `;
+          propertyList.appendChild(listItem);
+        });
+
+        // Initialize swiper
+
+        var swiper = new Swiper('.mySwiper', {
+          grabCursor: true,
+          pagination: {
+            el: '.swiper-pagination',
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      }
+    </script>
+
+    <!--Explore Section  --------------------------------------------------------------------------------->
+
+    <section id="ex" class="explore-section" style="width: 100%">
+      <div class="container-rent">
+        <h2 class="h2 section-title">Explore Abu Dhabi Regions</h2>
+        <ul class="property-list has-scrollbar">
+          <li>
+            <div class="location-card">
+              <figure class="card-banner">
+                <img
+                  src="BURJ KHALIFA, world's tallest tower _ Tour & view from the top (Dubai).jpg"
+                  alt="New Apartment Nice View"
+                />
+              </figure>
+              <div class="text">
+                <h1>Al Mushrif</h1>
+                <h6>
+                  Al Mushrif is a central neighborhood in the city of Abu Dhabi
+                  zone one. Al-Mushrif is located in an area between Sheikh
+                  Rashid Bin Saeed Street "Airport Road" and Arabian gulf
+                  Street, which extends to Mussafah Bridge. It contains the Al
+                  Mushrif Palace and Al Mushrif Park.
+                </h6>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="location-card">
+              <figure class="card-banner">
+                <img
+                  src="BURJ KHALIFA, world's tallest tower _ Tour & view from the top (Dubai).jpg"
+                  alt="New Apartment Nice View"
+                />
+              </figure>
+              <div class="text">
+                <h1>Al Murror</h1>
+                <h6>
+                  Al Muroor gets its name from the famous, Sultan Bin Zayed, The
+                  First Street, it was formerly known as Muroor Road or 4th
+                  Street. The neighborhood houses a mix of commercial and
+                  residential properties. Presenting a quiet yet spirited
+                  environment for the residents,Al Muroor is one of the best
+                  areas for singles to rent property in Abu Dhabi.
+                </h6>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="location-card">
+              <figure class="card-banner">
+                <img
+                  src="BURJ KHALIFA, world's tallest tower _ Tour & view from the top (Dubai).jpg"
+                  alt="New Apartment Nice View"
+                />
+              </figure>
+              <div class="text">
+                <h1>Al Bateen</h1>
+                <h6>
+                  Al Bateen Upscale Al Bateen is the home of high-rise hotels
+                  overlooking the Persian Gulf, with family beaches lining the
+                  elegant Corniche promenade. Photographs and documents
+                  displayed in Zayed Heritage Center celebrate the life of
+                  Sheikh Zayed, the former ruler of Abu Dhabi. Superyachts moor
+                  in Marsa Al Bateen Marina, which is surrounded by stylish
+                  global restaurants.
+                </h6>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="location-card">
+              <figure class="card-banner">
+                <img
+                  src="BURJ KHALIFA, world's tallest tower _ Tour & view from the top (Dubai).jpg"
+                  alt="New Apartment Nice View"
+                />
+              </figure>
+              <div class="text">
+                <h1>Al Karama</h1>
+                <h6>
+                  Al Karama is located in Abu Dhabi City, almost in the centre
+                  of the island. The area lies between two blocks called Al
+                  Karamah Street and Sheikh Rashid Bin Saeed Street, and is
+                  closed off at either end by Mohamed Bin Khalifa Street and
+                  Hazza Bin Zayed Street
+                </h6>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="location-card">
+              <figure class="card-banner">
+                <img
+                  src="BURJ KHALIFA, world's tallest tower _ Tour & view from the top (Dubai).jpg"
+                  alt="New Apartment Nice View"
+                />
+              </figure>
+              <div class="text">
+                <h1>Al Zaab</h1>
+                <h6>
+                  Al Zaab Right in the center of the capital city, Al Zaab is a
+                  residential community in Abu Dhabi preferred by families and
+                  individuals. It is located between Al Karamah and Mubarak Bin
+                  Mohammed Street. The area offers many apartments and a variety
+                  of villas as well. The residents of the area benefit from the
+                  facilities available in Al Zaab.
+                </h6>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="location-card">
+              <figure class="card-banner">
+                <img
+                  src="BURJ KHALIFA, world's tallest tower _ Tour & view from the top (Dubai).jpg"
+                  alt="New Apartment Nice View"
+                />
+              </figure>
+              <div class="text">
+                <h1>Air port Road</h1>
+                <h6>
+                  Air port Road Airport Street has many names in the emirate
+                  such as Airport Road, 2nd Street or its formal name Sheikh
+                  Rashid Bin Saeed Al Maktoum Street. It is a key point for the
+                  emirate as Abu Dhabi is split down the middle by Airport Road,
+                  connecting the entire capital together.
+                </h6>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="location-card">
+              <figure class="card-banner">
+                <img
+                  src="BURJ KHALIFA, world's tallest tower _ Tour & view from the top (Dubai).jpg"
+                  alt="New Apartment Nice View"
+                />
+              </figure>
+              <div class="text">
+                <h1>Al Danah</h1>
+                <h6>
+                  Al Danah is located in the heart of Abu Dhabi – one can spot
+                  it near the Abu Dhabi Mall and Al Manhal Palace. It is rather
+                  a bustling suburb with streets loaded with shops, restaurants
+                  and other amenities. One of the oldest areas of Abu Dhabi, Al
+                  Danah is home to Madinat Zayed Shopping Centre
+                </h6>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="location-card">
+              <figure class="card-banner">
+                <img
+                  src="BURJ KHALIFA, world's tallest tower _ Tour & view from the top (Dubai).jpg"
+                  alt="New Apartment Nice View"
+                />
+              </figure>
+              <div class="text">
+                <h1>Al Hosn</h1>
+                <h6>
+                  Al Hosn, is a popular area in Abu Dhabi that lies on the
+                  northern side of the capital city. The district is located
+                  towards the coastal shore, western side of Al Danah and on the
+                  east of Khalidiya Village. It is home to Qasr Al Hosn, a
+                  historical landmark of the emirate.
+                </h6>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="location-card">
+              <figure class="card-banner">
+                <img
+                  src="BURJ KHALIFA, world's tallest tower _ Tour & view from the top (Dubai).jpg"
+                  alt="New Apartment Nice View"
+                />
+              </figure>
+
+              <div class="text">
+                <h1>Al Khaleej Al Arabi Street</h1>
+                <h6>
+                  Al Khaleej Al Arabi Street is part of the large mixed-use
+                  locality in Al Bateen, a key residential community in Abu
+                  Dhabi. It is filled with landscaped gardens and master
+                  developments. Most restaurants, hotels and bars are just a few
+                  minutes away.
+                </h6>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="location-card">
+              <figure class="card-banner">
+                <img
+                  src="BURJ KHALIFA, world's tallest tower _ Tour & view from the top (Dubai).jpg"
+                  alt="New Apartment Nice View"
+                />
+              </figure>
+              <div class="text">
+                <h1>Al Khaldiya</h1>
+                <h6>
+                  Khalidiya or its official name Al Khalidiyah is a cultural hub
+                  of Abu Dhabi. Khalidiyah is where old meets new while also
+                  showcasing the capital’s heritage. Its central location makes
+                  this vibrant suburb one of the most popular areas for expats
+                  and local families looking to live right in the heart of Abu
+                  Dhabi.
+                </h6>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="location-card">
+              <figure class="card-banner">
+                <img
+                  src="BURJ KHALIFA, world's tallest tower _ Tour & view from the top (Dubai).jpg"
+                  alt="New Apartment Nice View"
+                />
+              </figure>
+              <div class="text">
+                <h1>Al Maharba</h1>
+                <h6>
+                  Al Maharba Abu Dhabi, the capital of the United Arab Emirates,
+                  sits off the mainland on an island in the Persian (Arabian)
+                  Gulf. Its focus on oil exports and commerce is reflected by
+                  the skyline’s modern towers and shopping megacenters such as
+                  Abu Dhabi and Marina malls.
+                </h6>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="location-card">
+              <figure class="card-banner">
+                <img
+                  src="BURJ KHALIFA, world's tallest tower _ Tour & view from the top (Dubai).jpg"
+                  alt="New Apartment Nice View"
+                />
+              </figure>
+              <div class="text">
+                <h1>Al Manaseer</h1>
+                <h6>
+                  Al Manaseer is part of the Al Rowdah district and lies between
+                  the popular residential areas of Al Karamah and Al Bateen. It
+                  is a peaceful, family-friendly area. There are many apartments
+                  and a few villas in the small and cosy locality. The area is
+                  equally popular among families and individuals because of its
+                  location near the well-connected districts of the capital
+                  city.
+                </h6>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="location-card">
+              <figure class="card-banner">
+                <img
+                  src="BURJ KHALIFA, world's tallest tower _ Tour & view from the top (Dubai).jpg"
+                  alt="New Apartment Nice View"
+                />
+              </figure>
+              <div class="text">
+                <h1>Al Manhal</h1>
+                <h6>
+                  Al Manhal is a popular residential community located in the
+                  heart of the UAE capital. It is home to historical landmarks
+                  including Al Manhal Palace and Al Bateen Palace. Al Manhal has
+                  apartment buildings as well as villas. Amenities such as
+                  schools, parks, hospitals, supermarkets, shopping malls,
+                  hotels and leisure places are in proximity.
+                </h6>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="location-card">
+              <figure class="card-banner">
+                <img
+                  src="BURJ KHALIFA, world's tallest tower _ Tour & view from the top (Dubai).jpg"
+                  alt="New Apartment Nice View"
+                />
+              </figure>
+              <div class="text">
+                <h1>Al Marina</h1>
+                <h6>
+                  Fairmont Marina Residences conveys elegance and luxury. A
+                  wonderful opportunity to acquire, imagine your residence’s
+                  terrace opening to the breathtaking, panoramic view of Abu
+                  Dhabi. Located next to Marina Sunset Bay Villas and the
+                  upcoming Fairmont Hotel and within walking distance to Marina
+                  Mall.
+                </h6>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="location-card">
+              <figure class="card-banner">
+                <img
+                  src="BURJ KHALIFA, world's tallest tower _ Tour & view from the top (Dubai).jpg"
+                  alt="New Apartment Nice View"
+                />
+              </figure>
+              <div class="text">
+                <h1>Al Nahyan</h1>
+                <h6>
+                  Al Nahyan It is has become a central part of Abu Dhabi's
+                  rental real estate landscape. Located in the heart of the
+                  city, the area is home to the Al Nahyan Stadium and neighbours
+                  the Al Karamah and Al Mushrif districts. The area is still
+                  close enough for those who commute to the city center.
+                </h6>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="location-card">
+              <figure class="card-banner">
+                <img
+                  src="BURJ KHALIFA, world's tallest tower _ Tour & view from the top (Dubai).jpg"
+                  alt="New Apartment Nice View"
+                />
+              </figure>
+              <div class="text">
+                <h1>Al Wahdah</h1>
+                <h6>
+                  Al Wahdah is best known for Al Wahda Sports Club, Al Nahyan
+                  Stadium and Al Wahda Mall. The iconic community of Al Wahdah
+                  in Abu Dhabi is home to a number of mid and high-rise
+                  buildings along with a few residential villas. It offers a
+                  buzzing lifestyle to its residents because of its central
+                  location in the capital city.
+                </h6>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="location-card">
+              <figure class="card-banner">
+                <img
+                  src="BURJ KHALIFA, world's tallest tower _ Tour & view from the top (Dubai).jpg"
+                  alt="New Apartment Nice View"
+                />
+              </figure>
+              <div class="text">
+                <h1>Al Zahyia</h1>
+                <h6>
+                  Al Zahiyah, formerly known as the Tourist Club Area, is an
+                  area in central Abu Dhabi, United Arab Emirates. Al Zahiyah is
+                  an entertainment location, with restaurants, hotels (including
+                  the Beach Rotana), bars, and nightlife. The Abu Dhabi Mall is
+                  also located here.
+                </h6>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="location-card">
+              <figure class="card-banner">
+                <img
+                  src="BURJ KHALIFA, world's tallest tower _ Tour & view from the top (Dubai).jpg"
+                  alt="New Apartment Nice View"
+                />
+              </figure>
+              <div class="text">
+                <h1>Corniche</h1>
+                <h6>
+                  Corniche Area is one of the most sought after places to live
+                  in Abu Dhabi, offering luxury apartments close to the beach.
+                  Corniche Area is known to be one of the few areas that offers
+                  waterfront living in residential towers. The area is close to
+                  the popular Corniche Road, which is considered one of the most
+                  visited tourist areas in Abu Dhabi.
+                </h6>
+              </div>
+            </div>
+          </li>
+
+          <!-- <li>
+            <div class="location-card">
+              <figure class="card-banner">
+                <img
+                  src="BURJ KHALIFA, world's tallest tower _ Tour & view from the top (Dubai).jpg"
+                  alt="New Apartment Nice View"
+                />
+              </figure>
+              <div class="text">
+                <h1>Grand Mosque District</h1>
+                <h6></h6>
+              </div>
+            </div>
+          </li> -->
+
+          <li>
+            <div class="location-card">
+              <figure class="card-banner">
+                <img
+                  src="BURJ KHALIFA, world's tallest tower _ Tour & view from the top (Dubai).jpg"
+                  alt="New Apartment Nice View"
+                />
+              </figure>
+              <div class="text">
+                <h1>Khalifa Park</h1>
+                <h6>
+                  Khalifa Park Where there’s a lot to do in Khalifa Park with
+                  kids and friends, the place is ideal for renting properties in
+                  Abu Dhabi. Also, tenants lie close to basic living amenities
+                  including schools, pharmacies, medical centers and eateries.
+                  Khalifa Park is somewhere between Al Bateen Executive Airport
+                  and Eastern Mangrove.
+                </h6>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="location-card">
+              <figure class="card-banner">
+                <img
+                  src="BURJ KHALIFA, world's tallest tower _ Tour & view from the top (Dubai).jpg"
+                  alt="New Apartment Nice View"
+                />
+              </figure>
+              <div class="text">
+                <h1>Tourist Club Area</h1>
+                <h6>
+                  Tourist Club Area is now known by its new name Al Zahiyah. The
+                  area is located on the eastern side of Abu Dhabi. It is one of
+                  the downtown areas of the capital city and enjoys a prime
+                  location by being in the centre of Corniche Road East and Al
+                  Falah Street. The community has high-rise buildings and towers
+                  and there are no villas in the area.
+                </h6>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="location-card">
+              <figure class="card-banner">
+                <img
+                  src="BURJ KHALIFA, world's tallest tower _ Tour & view from the top (Dubai).jpg"
+                  alt="New Apartment Nice View"
+                />
+              </figure>
+              <div class="text">
+                <h1>Zayed Sports City</h1>
+                <h6>
+                  Zayed Sports City is the premier sport and entertainment venue
+                  in the region. Built to fulfil the vision of the late Sheikh
+                  Zayed bin Sultan Al Nahyan, the UAE’s founding father and
+                  first president, ZSC continues to build, learn and grow,
+                  ensuring it delivers the best possible experience to every
+                  guest.
+                </h6>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Footer Section ---------------------------------------------------------------------------------------------------------------->
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-brand">
+            <p class="footer-list-title">MASAR</p>
+
+            <!-- <a href="#" class="logo">
+            <img src="imgs/aa643105-4d9b-44fa-921f-8ffc75b6dfa2.jpg" alt="Homeverse logo" style="width: 200px;">
+          </a> -->
+
+            <p class="section-text">
+              MASAR can ensure that securing your dream home will be a smooth
+              process whether you wish to Buy or Rent from the primary or
+              secondary market.
+            </p>
+
+            <ul class="contact-list">
+              <li>
+                <a href="#" class="contact-link">
+                  <ion-icon name="location-outline"></ion-icon>
+
+                  <address>Brooklyn, New York, United States</address>
+                </a>
+              </li>
+
+              <li>
+                <a href="tel:+971566702470" class="contact-link">
+                  <ion-icon name="call-outline"></ion-icon>
+
+                  <span>+971 56 670 2470</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="contact-link">
+                  <ion-icon name="mail-outline"></ion-icon>
+
+                  <span>contact@Masar.com</span>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="social-list">
+              <li>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61556005683471&mibextid=ZbWKwL"
+                  class="social-link"
+                  target="_blank"
+                >
+                  <ion-icon
+                    name="logo-facebook"
+                    style="font-size: 30px"
+                  ></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link" target="_blank">
+                  <ion-icon
+                    name="logo-twitter"
+                    style="font-size: 30px"
+                  ></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.tiktok.com/@masar_real_estate?is_from_webapp=1&sender_device=pc"
+                  class="social-link"
+                  target="_blank"
+                >
+                  <ion-icon
+                    name="logo-TikTok"
+                    style="font-size: 30px"
+                  ></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link" target="_blank">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    width="30"
+                    height="30"
+                    viewBox="0,0,256,256"
+                  >
+                    <g
+                      fill="#ffffff"
+                      fill-rule="nonzero"
+                      stroke="none"
+                      stroke-width="1"
+                      stroke-linecap="butt"
+                      stroke-linejoin="miter"
+                      stroke-miterlimit="10"
+                      stroke-dasharray=""
+                      stroke-dashoffset="0"
+                      font-family="none"
+                      font-weight="none"
+                      font-size="none"
+                      text-anchor="none"
+                      style="mix-blend-mode: normal"
+                    >
+                      <g transform="scale(8,8)">
+                        <path
+                          d="M18.5,2c-7.75,0 -12.5,9.25 -12.5,14c0,0 3.25,-12 13,-12c3.625,0 6,2 6,2c0,0 -1,-4 -6.5,-4zM17.5,7c-1.933,0 -3.5,1.567 -3.5,3.5c0,1.933 1.567,3.5 3.5,3.5c1.933,0 3.5,-1.567 3.5,-3.5c0,-1.933 -1.567,-3.5 -3.5,-3.5zM20,16c0,0 -1,1 -5,1v10.5c0,1.381 1.119,2.5 2.5,2.5c1.381,0 2.5,-1.119 2.5,-2.5z"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://accounts.snapchat.com/v2/welcome"
+                  class="social-link"
+                  target="_blank"
+                >
+                  <ion-icon
+                    name="logo-snapchat"
+                    style="font-size: 30px"
+                  ></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.instagram.com/masar.realestate.ae?igsh=MWY0bGRtYWw2cm1oZA=="
+                  class="social-link"
+                  style="font-size: 30px"
+                  target="_blank"
+                >
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/101589068/admin/feed/posts/?feedType=following"
+                  class="social-link"
+                  target="_blank"
+                >
+                  <ion-icon
+                    name="logo-Linkedin"
+                    style="font-size: 30px"
+                  ></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.pinterest.com/Masar16/"
+                  class="social-link"
+                  target="_blank"
+                >
+                  <ion-icon
+                    name="logo-Pinterest"
+                    style="font-size: 30px"
+                  ></ion-icon>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-link-box">
+            <ul class="footer-list">
+              <li>
+                <p class="footer-list-title">Quick Link Explore</p>
+              </li>
+
+              <li>
+                <a href="rent.html" class="footer-link">Properties For Rent</a>
+              </li>
+
+              <li>
+                <a href="sale.html" class="footer-link">Properties For Sale</a>
+              </li>
+
+              <li>
+                <a href="Off-plan.html" class="footer-link">Off Plan</a>
+              </li>
+
+              <li>
+                <a href="Home.html#ex" class="footer-link">Abu Dhabi Areas</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Residential</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Commercial</a>
+              </li>
+            </ul>
+
+            <ul class="footer-list">
+              <li>
+                <p class="footer-list-title">OUR Services</p>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Buying properties</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Selling Properties</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Leasing Properties</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Evaluation</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Managment</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Investment</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Properly Consultation</a>
+              </li>
+            </ul>
+
+            <ul class="footer-list">
+              <li>
+                <p class="footer-list-title">Keep in Touch</p>
+              </li>
+
+              <form id="form3" onsubmit="validateAndSendEmail();">
+                <li>
+                  <input
+                    type="email"
+                    placeholder="Your Email here..."
+                    class="subscribe"
+                    id="email3"
+                    required
+                  />
+                </li>
+
+                <li>
+                  <input
+                    type="text"
+                    placeholder="Your Number here..."
+                    class="subscribe"
+                    id="phone3"
+                    required
+                  />
+                </li>
+
+                <li>
+                  <button
+                    type="submit"
+                    class="subscribe"
+                    style="background-color: #2a8ded; color: #ffffff"
+                  >
+                    Submit
+                  </button>
+                </li>
+              </form>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+      <script>
+        let form3 = document.getElementById('form3');
+        form3.addEventListener('submit', function (event) {
+          event.preventDefault();
+        });
+
+        function validateAndSendEmail() {
+          let phone3 = document.getElementById('phone3').value;
+          let email3 = document.getElementById('email3').value;
+
+          if (!validateEmail(email3)) {
+            alert('Please enter a valid email address.');
+            return;
+          }
+
+          if (!validatePhone(phone3)) {
+            alert('Please enter a valid phone number.');
+            return;
+          }
+
+          let body = `Email: ${email3} <br>PhoneNumber: ${phone3}`;
+          Email.send({
+            Host: 'smtp.elasticemail.com',
+            Username: 'basantsaed718@gmail.com',
+            Password: '233DE19F71A53AA86828631A9A3B3167E6D0',
+            To: 'basantsaeed267@gmail.com',
+            From: 'basantsaed718@gmail.com',
+            Subject: 'New Form Submission From Your Website..',
+            Body: body,
+          }).then((message) => alert(message));
+        }
+
+        function validateEmail(email) {
+          // Basic email validation regex
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return emailRegex.test(email);
+        }
+
+        function validatePhone(phone) {
+          // Basic phone number validation regex
+          const phoneRegex = /^\d{5,20}$/;
+          return phoneRegex.test(phone);
+        }
+      </script>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
