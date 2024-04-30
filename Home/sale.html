@@ -1900,7 +1900,7 @@
 
       // Function to fetch properties for a specific section
       function fetchProperties(sectionId, city) {
-        const host = "https://real-estate-backend-9d9v.onrender.com";
+        const host = "https://masar-company.onrender.com";
         fetch(`${host}/property/search?propertyFor=Sale&propertyPage=Sale`)
           .then((response) => response.json())
           .then((data) => {
@@ -1917,7 +1917,7 @@
         const propertyList = document
           .getElementById(sectionId)
           .querySelector(".property-list");
-        const host = "https://real-estate-backend-9d9v.onrender.com";
+        const host = "https://masar-company.onrender.com";
 
         data.forEach((property) => {
           // Check if the property belongs to the current section
