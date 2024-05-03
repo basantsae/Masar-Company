@@ -1,3 +1,6 @@
+process.on('uncaughtException', function (err) {
+  console.log(err);
+});
 const express = require('express');
 const bodyParser = require('body-parser');
 const adminRoutes = require('./routes/adminRoutes');
