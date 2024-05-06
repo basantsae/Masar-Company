@@ -22,6 +22,8 @@ export const suggestions = {
     'Comp',
     'Farm',
     'Off-plan',
+    'Pent house',
+    'Residential Land'
   ],
   propertySectionSuggestions: [
     'property1',
