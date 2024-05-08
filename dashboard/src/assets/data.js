@@ -3,7 +3,7 @@ export const suggestions = {
   propertyTypeSuggestions: [
     'Commercial Land',
     'Industrial Land',
-    'Villa',
+    'Residential Villa',
     'Commercial Villa',
     'Town House',
     'Residential Building',
