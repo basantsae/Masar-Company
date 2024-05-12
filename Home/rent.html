@@ -571,6 +571,13 @@
             flex-direction: column;
         }}
         
+
+
+        .swiper-button-next.swiper-button-disabled,.swiper-button-prev.swiper-button-disabled {
+          /* opacity:.35; */
+          cursor: auto;
+          /* pointer-events:none; */
+      }
     </style>
   </head>
 
@@ -1803,6 +1810,7 @@
       var swiper = new Swiper(".slide-container", {
         slidesPerView: 3,
         spaceBetween: 15,
+        sliderPerGroup: 3,
         centerSlide: "true",
         fade: "true",
         grabCursor: "true",
