@@ -2019,19 +2019,18 @@
           }
         });
 
-       // Initialize swiper
-
-       var swiper = new Swiper('.mySwiper', {
-        grabCursor: true,
-        pagination: {
-          el: '.swiper-pagination',
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      });
-    }
+        // Initialize swiper for this section
+        var swiper = new Swiper(`#${sectionId} .mySwiper`, {
+          grabCursor: true,
+          pagination: {
+            el: `#${sectionId} .swiper-pagination`,
+          },
+          navigation: {
+            nextEl: `#${sectionId} .swiper-button-next`,
+            prevEl: `#${sectionId} .swiper-button-prev`,
+          },
+        });
+      }
     </script>
     <footer class="footer">
       <div class="footer-top">

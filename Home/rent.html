@@ -2016,16 +2016,15 @@
           }
         });
 
-        // Initialize swiper
-
-        var swiper = new Swiper('.mySwiper', {
+        // Initialize swiper for this section
+        var swiper = new Swiper(`#${sectionId} .mySwiper`, {
           grabCursor: true,
           pagination: {
-            el: '.swiper-pagination',
+            el: `#${sectionId} .swiper-pagination`,
           },
           navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: `#${sectionId} .swiper-button-next`,
+            prevEl: `#${sectionId} .swiper-button-prev`,
           },
         });
       }
