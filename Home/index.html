@@ -104,18 +104,30 @@
       .w-100 {
         width: 100%;
       }
-      .swiper-navBtn {
-        color: #fff;
+      #swiper-navBtn-next,#swiper-navBtn-prev {
         height: 40px;
         width: 40px;
-        background: #192f63;
-        border-radius: 50%;
+        background:#192f63;
+        border-radius: 35%;
+        cursor: pointer;
+        border: none;
+        text-align: center;
       }
-      .swiper-navBtn::before,
-      .swiper-navBtn::after {
+      #swiper-navBtn-next::before,#swiper-navBtn-prev::before,
+      #swiper-navBtn-next::after,#swiper-navBtn-prev::after {
         font-size: 18px;
       }
 
+      #swiper-navBtn-next{
+        position: absolute;
+        right: 10px; /* Adjust this value as needed */
+      }
+
+      #swiper-navBtn-prev{
+        position: absolute;
+        left: 10px; /* Adjust this value as needed */
+
+      }
       .swiper-pagination-bullet {
         background-color: #000;
       }
@@ -801,13 +813,13 @@
 
         <h2 class="h2 section-title">Search Results:</h2>
 
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section>
@@ -818,13 +830,13 @@
 
         <h2 class="h2 section-title">Buy and Sell with Masar</h2>
 
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section>
@@ -835,13 +847,13 @@
 
         <h2 class="h2 section-title">Explore Feature Properties</h2>
 
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section>
@@ -854,13 +866,13 @@
           Explore The Most Desired Communties in Abu Dhabi
         </h2>
 
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section>
@@ -872,18 +884,18 @@
       var swiper = new Swiper(".slide-container", {
         slidesPerView: 3,
         spaceBetween: 15,
-        sliderPerGroup: 3,
+        slidesPerGroup: 1,
         centerSlide: "true",
         fade: "true",
         grabCursor: "true",
         pagination: {
-          el: ".swiper-pagination",
+          el: ".swiper-pagination1",
           clickable: true,
           dynamicBullets: true,
         },
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".swiper-button-next1",
+          prevEl: ".swiper-button-prev1",
         },
 
         breakpoints: {
