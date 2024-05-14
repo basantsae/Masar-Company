@@ -551,18 +551,32 @@
       }
     
   
-      .swiper-navBtn {
-        color: #fff;
+      #swiper-navBtn-next,#swiper-navBtn-prev {
         height: 40px;
         width: 40px;
         background:#192f63;
-        border-radius: 50%;
+        border-radius: 35%;
+        cursor: pointer;
+        border: none;
+        text-align: center;
       }
-      .swiper-navBtn::before,
-      .swiper-navBtn::after {
+      #swiper-navBtn-next::before,#swiper-navBtn-prev::before,
+      #swiper-navBtn-next::after,#swiper-navBtn-prev::after {
         font-size: 18px;
       }
-  
+
+      #swiper-navBtn-next{
+        position: absolute;
+        right: 10px; /* Adjust this value as needed */
+      }
+
+      #swiper-navBtn-prev{
+        position: absolute;
+        left: 10px; /* Adjust this value as needed */
+
+      }
+
+      
       .swiper-pagination-bullet {
         background-color: #000;
       }
@@ -735,13 +749,13 @@
           immense Persian carpet, crystal chandeliers and capacity for 41,000
           worshipers.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section>
@@ -758,13 +772,13 @@
           environment. Moreover, the area’s location allows residents to remain
           connected with downtown Abu Dhabi.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section>
@@ -782,13 +796,13 @@
           People who live there enjoy the quite community and access to gyms,
           recreation facilities, large gardens and parking.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section>
@@ -811,13 +825,13 @@
           that the residents do not have to leave the premises for day-to-day
           necessities.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section>
@@ -832,13 +846,13 @@
           the Abu Dhabi Island CBD, northeast of Mohammed Bin Zayed City and
           south of Abu Dhabi International Airport.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section>
@@ -856,13 +870,13 @@
           to its proximity to the happening emirate of Dubai and the variety of
           housing options available to all.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section>
@@ -879,13 +893,13 @@
           centuries-old ceramics were recovered. Farther south are the oasis
           town of Liwa and the vast desert expanse of the Empty Quarter.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section>
@@ -905,13 +919,13 @@
           spaces, health facilities, parks, entertainment options, cycle lanes
           and mosques have been added.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section>
@@ -927,13 +941,13 @@
           minutes’ drive. It is intended to relieve the crowding and provide new
           housing and a fresh city for families.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section>
@@ -952,13 +966,13 @@
           far from the city. Bawabat Al Sharq is a well-known villa community in
           Baniyas.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section>
@@ -977,13 +991,13 @@
           land featuring a variety of residential and commercial properties,
           along with clinics, hospitals, schools, mosques, malls and parks.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section>
@@ -1000,13 +1014,13 @@
           many amenities including schools, clinics and supermarkets for a
           comfortable living.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section>
@@ -1025,13 +1039,13 @@
           Port, it will be an ideal choice for people who have to travel from
           one emirate to another for work.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section>
@@ -1048,13 +1062,13 @@
           along the junction between the E10 and E11 Highways that carry traffic
           between Abu Dhabi and Dubai..
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1068,13 +1082,13 @@
           United Arab Emirates. It is 350 kilometres west of Abu Dhabi and 450
           kilometres west of Dubai, mainly consisting of Emirati town houses.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1094,13 +1108,13 @@
           independent houses in unique configurations Located close to Dubai –
           Al Ain border
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1115,13 +1129,13 @@
           Road. It is a coastal area composed of mangrove plantations along the
           coastal strip with spacious apartments and peaceful streets.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1136,13 +1150,13 @@
           Khushaishah. The island is 60km away from Abu Dhabi and is connected
           to the mainland through a bridge.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1158,13 +1172,13 @@
           its own “Village and Neighborhood Center” and contains a mosque, a
           market square, and a mix of local shops and offices.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1177,13 +1191,13 @@
           Al Faya Al Ain Road Abu Dhabi UAE is a Local Business, located at: Abu
           Dhabi, United Arab Emirates.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1202,13 +1216,13 @@
           resulting in an increased demand for properties, especially for newly
           constructed apartments.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1223,13 +1237,13 @@
           residents to relax on weekends. Since its opening, the island has been
           home to several attractions like cycling, sports courts and the beach.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1249,13 +1263,13 @@
           can find this place the best spot. Explore and discover this part of
           Abu Dhabi with an off-road tour in the famous Al Khatim Desert.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1273,13 +1287,13 @@
           circular treasury, and is famous for large farms and the treasury
           palace which is one of the major monuments in the region.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1297,13 +1311,13 @@
           access to Sheikh Shakhbout Medical City, formerly known as Al Mafraq
           Hospital. It is one of the top government hospitals in Abu Dhabi.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1318,13 +1332,13 @@
           Island and is home to various blue chip companies and local, regional
           and international institutions.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1341,13 +1355,13 @@
           configurations and a range of communal facilities such as parks,
           hospital and education institutes.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1366,13 +1380,13 @@
           apartments, 4-bedroom townhouses and 5-bedroom luxury villas. There is
           also a 12-storey commercial tower.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1391,13 +1405,13 @@
           Also, basic amenities like mosques, shops and family recreation
           facilities are well within reach.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1412,13 +1426,13 @@
           retreat away from the bustling urban landscape. Divided into Al Nahdah
           East and Al Nahdah West, the area is largely underdeveloped.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1439,13 +1453,13 @@
           is the waterfront lifestyle, luxurious amenities and the Al Gurm
           Resort.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1465,13 +1479,13 @@
           seeking a deluxe community that’s complete with entertainment, culture
           and world-class amenities.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1487,13 +1501,13 @@
           highlight of Golf Gardens is its proximity to popular locations such
           as Al Raha Beach and The Westin Abu Dhabi Golf Resort and Spa.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1512,13 +1526,13 @@
           Mosque. The well-connected road system, communal parks and embassies
           of different estates are other features of the community.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1534,13 +1548,13 @@
           investment hotspot over the years, making a definitive mark in the Abu
           Dhabi real estate market.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1557,13 +1571,13 @@
           Al Reem Island Abu Dhabi to choose from – luxury penthouses,
           apartments and stunning waterfront villas.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1584,13 +1598,13 @@
           especially during the festive season. Moreover, the residential area
           will have several properties.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1611,13 +1625,13 @@
           properties distinctive are the delightful citrusy shades that they are
           painted with.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1635,13 +1649,13 @@
           (Bedouins, islanders, farm owners). Years ago, Liwa became a modern,
           integrated city with all the necessary services.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1656,13 +1670,13 @@
           state-owned Mubadala Investment Company, with the majority of seed
           capital provided by the Governm
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1677,13 +1691,13 @@
           important economic areas of the United Arab Emirates and has been
           designated a special economic zone, with numerous factories and port.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1700,13 +1714,13 @@
           to come. Nareel will be home to a tranquil yet active neighborhood
           with a swimming lagoon, club house and open parks across the Island.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1725,13 +1739,13 @@
           residence, besides a tranquil wellness center amidst serene
           surroundings and open bay views.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1749,13 +1763,13 @@
           mostly for the Island’s Cultural District that is expected to include
           eight museums.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1771,13 +1785,13 @@
           Road. The area caters to all the basic needs of residents and offers a
           family-friendly lifestyle.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1793,13 +1807,13 @@
           multi-purpose leisure, shopping and entertainment center at an
           estimated total cost of over billion.
         </p>
-        <div class="container swiper">
+        <div class="container swiper" style="display: grid;align-items: center;">
           <div class="slide-container">
             <ul class="property-list swiper-wrapper"></ul>
           </div>
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next1" id="swiper-navBtn-next"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform:none;margin-top: 1px;"><path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z"></path></svg></div>
+          <div class="swiper-button-prev1" id="swiper-navBtn-prev"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: none;margin-top:1px"><path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z"></path></svg></div>
+          <div class="swiper-pagination1"></div>
         </div>
       </div>
     </section> -->
@@ -1810,18 +1824,18 @@
       var swiper = new Swiper(".slide-container", {
         slidesPerView: 3,
         spaceBetween: 15,
-        sliderPerGroup: 3,
+        slidesPerGroup: 1,
         centerSlide: "true",
         fade: "true",
         grabCursor: "true",
         pagination: {
-          el: ".swiper-pagination",
+          el: ".swiper-pagination1",
           clickable: true,
           dynamicBullets: true,
         },
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".swiper-button-next1",
+          prevEl: ".swiper-button-prev1",
         },
 
         breakpoints: {
