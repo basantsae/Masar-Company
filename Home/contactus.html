@@ -175,6 +175,14 @@
       .active {
         background-color: #192f63;
       }
+      .home-background video
+      {
+        width: 100%;
+        object-fit:fill;
+        z-index: 1;
+      }
+      .background-detail {
+        margin-top: 60px;}
     </style>
   </head>
   <body>
@@ -210,11 +218,15 @@
     <!-- home-background section --------------------------------------------------------------->
     <section class="home-background">
       <div class="background-detail">
-        <img
-          class="background-img"
-          src="img/contact-register-feedback-support-help-concept_53876-124243.jpg"
-          style="width: 100%"
-        />
+        <video
+        loop
+        autoplay
+        muted="true"
+        preload="metadata"
+        width="100%"
+        height="500px"
+        src="img/WhatsApp Video 2024-05-11 at 9.20.13 PM.mp4">
+        </video>
       </div>
     </section>
 
