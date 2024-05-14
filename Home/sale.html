@@ -576,7 +576,7 @@
 
       }
 
-      
+
       .swiper-pagination-bullet {
         background-color: #000;
       }
@@ -2034,14 +2034,14 @@
         });
 
         // Initialize swiper for this section
-        var swiper = new Swiper(`#${sectionId} .mySwiper`, {
+        var swiper = new Swiper(`.mySwiper`, {
           grabCursor: true,
           pagination: {
-            el: `#${sectionId} .swiper-pagination`,
+            el: `.swiper-pagination`,
           },
           navigation: {
-            nextEl: `#${sectionId} .swiper-button-next`,
-            prevEl: `#${sectionId} .swiper-button-prev`,
+            nextEl: `.swiper-button-next`,
+            prevEl: `.swiper-button-prev`,
           },
         });
       }
