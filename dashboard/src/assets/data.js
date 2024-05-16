@@ -29,6 +29,7 @@ export const suggestions = {
     'property1',
     'property2',
     'property3',
+    'property4',
     'AlReem-off',
     'AlSaadiyat-off',
     'Rahman-off',
