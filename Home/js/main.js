@@ -61,4 +61,17 @@ function toggleMenu() {
   //     }});
   
   //   });
+
+
+  // -------------------scroll reveal----------
+ScrollReveal(
+  {
+      reset:true,
+      distance:'80px',
+      duration:2000,
+      delay:200
+  }
+)
+ScrollReveal().reveal('.centered', {origin: 'left' });
+// ScrollReveal().reveal('.centered' ,{origin: 'right' });
           

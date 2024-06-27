@@ -587,7 +587,33 @@
             flex-direction: column;
         }}
         
+
+        .home-background {
+          right: 0;
+          width: 100%;
+          min-height: 100vh;
+          padding: 1em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #111;
+          transition: all 0.3s ease;
+          z-index: 2;
+      }
+
+      
+.home-background video {
+  margin-top: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
     </style>
+
+
   </head>
 
   <body>
@@ -623,13 +649,14 @@
     </nav>
     <!-- home-background section --------------------------------------------------------------------------------------------->
     <section class="home-background">
-      <div class="background-detail">
-        <img
-          class="background-img"
-          src="img/AdobeStock_602255720.jpeg"
-          style="width: 100%"
-        />
-      </div>
+        <video
+        loop
+        autoplay
+        muted="true"
+        preload="metadata"
+        width="100%"
+        src="img/White Brown Modern Minimalist Real Estate Open House Video.mp4">
+        </video>
     </section>
     <!-- Dropdown menu section -------------------------------------------------------------------------------------------------------->
     <section class="sectiondropdown">

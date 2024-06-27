@@ -275,10 +275,13 @@ nav .navbar ul li:hover :hover {
   margin-top: 30px;
   display: flex;
   align-items: flex-end;
+
+    justify-content: center;
 }
 .background-img {
   background-color: #cccccc;
-  height: 500px;
+  height: 670px;
+  /* min-height: 100hv; */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

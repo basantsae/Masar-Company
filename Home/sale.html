@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Find your dream home with Real Estate.Find your dream home with Masar . Browse through our listings of houses, apartments, and villa for sale or rent.">
     <meta name="keywords" content="real estate, homes for sale, homes for rent, apartments, masar company">
+
+    <script src="https://unpkg.com/scrollreveal"></script>
     
     <script
       type="module"
@@ -591,6 +593,27 @@
           align-items: center;
           flex-direction: column;
       }}
+
+
+      .centered {
+        position: absolute;
+        margin-bottom: 50px;
+        position: absolute;
+        /* width: 40%; */
+         /* height: 20%;*/
+        background-color: #F8F6F1;
+        padding: 35px;
+        /* border-radius: 20px; */
+        font-style: oblique;
+        /* opacity: 0.5; */
+    }
+
+    @media screen and (max-width: 768px) {
+      .home-background .centered h1 {
+          font-size: 17px;
+          margin: 1%;
+      }
+  }
     </style>
   </head>
 
@@ -630,9 +653,15 @@
       <div class="background-detail">
         <img
           class="background-img"
-          src="img/AdobeStock_602255720.jpeg"
-          style="width: 100%"
+          src="img/Home (1).png"
+          style="width: 100%;"
         />
+
+        <div class="centered">
+          <h1>Ready to start
+            a new chapter?</h1>
+          <h1>Let us help you find your dream home.</h1>
+        </div>
       </div>
     </section>
     <!-- Dropdown menu section -------------------------------------------------------------------------------------------------------->
