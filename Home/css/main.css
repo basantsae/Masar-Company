@@ -586,3 +586,7 @@ nav .navbar ul li:hover :hover {
     display: block;
   }
 }
+
+.swiper span{
+  display: inline;
+}
