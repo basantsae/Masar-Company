@@ -2369,13 +2369,16 @@
           let body = `Email: ${email3} <br>PhoneNumber: ${phone3}`;
           Email.send({
             Host: "smtp.elasticemail.com",
-            Username: "basantsaed718@gmail.com",
-            Password: "233DE19F71A53AA86828631A9A3B3167E6D0",
-            To: "basantsaeed267@gmail.com",
-            From: "basantsaed718@gmail.com",
+            Username: "info@masare.ae",
+            Password: "5AD9362381FA25063C5B920E14C2EB6354C3",
+            To: "info@masare.ae",
+            From: "info@masare.ae",
             Subject: "New Form Submission From Your Website..",
             Body: body,
           }).then((message) => alert(message));
+
+          form3.reset();
+
         }
 
         function validateEmail(email) {
@@ -2389,6 +2392,7 @@
           const phoneRegex = /^\d{5,20}$/;
           return phoneRegex.test(phone);
         }
+
       </script>
     </footer>
 
