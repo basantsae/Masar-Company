@@ -299,8 +299,6 @@
             return;
           }
           sendEmail1();
-          form2.reset();
-
         }
 
         function sendEmail1() {
@@ -320,7 +318,7 @@
             Body: body,
             }).then((message) => alert(message));
 
-           //form2.reset();
+           form2.reset();
         }
       </script>
     </section>
