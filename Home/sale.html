@@ -614,6 +614,43 @@
           margin: 1%;
       }
   }
+
+
+  .home-background {
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+
+.home-background video {
+  /*margin-top: 30px;*/
+  position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+object-fit: fill;
+}
+
+@media screen and (max-width:700px){
+  .home-background {
+    min-height: 0;
+     padding: 0;   }
+
+.home-background video {
+  margin-top: 80px;
+  position:relative;
+  object-fit: cover;
+}
+}
     </style>
   </head>
 
@@ -649,7 +686,7 @@
       </div>
     </nav>
     <!-- home-background section --------------------------------------------------------------------------------------------->
-    <section class="home-background">
+    <!-- <section class="home-background">
       <div class="background-detail">
         <img
           class="background-img"
@@ -663,7 +700,18 @@
           <h1>Let us help you find your dream home.</h1>
         </div>
       </div>
-    </section>
+    </section> -->
+
+    <section class="home-background">
+      <video
+      loop
+      autoplay
+      muted="true"
+      preload="metadata"
+      width="100%"
+      src="img/home.mp4">
+      </video>
+  </section>
     <!-- Dropdown menu section -------------------------------------------------------------------------------------------------------->
     <section class="sectiondropdown">
       <div class="dropdown">

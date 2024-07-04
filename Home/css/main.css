@@ -271,7 +271,7 @@ nav .navbar ul li:hover :hover {
   width: 100%;
   height: 100vh;
 } */
-.background-detail {
+/* .background-detail {
   margin-top: 30px;
   display: flex;
   align-items: flex-end;
@@ -281,13 +281,13 @@ nav .navbar ul li:hover :hover {
 .background-img {
   background-color: #cccccc;
   height: 670px;
-  /* min-height: 100hv; */
+  min-height: 100hv;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 30px;
   image-rendering: -webkit-optimize-contrast;
-}
+} */
 
 /* Footer section ..........................................................................................................................*/
 

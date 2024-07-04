@@ -542,7 +542,7 @@
       }*/
 
       .slide-container {
-        margin: 0 35px;
+        margin: 0 50px;
         overflow: hidden;
         } 
 
@@ -603,13 +603,25 @@
 
       
 .home-background video {
-  margin-top: 30px;
+  /*margin-top: 30px;*/
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   object-fit: fill;
+}
+
+@media screen and (max-width:700px){
+  .home-background {
+    min-height: 0;
+     padding: 0;   }
+
+.home-background video {
+  margin-top: 80px;
+  position:relative;
+  object-fit: cover;
+}
 }
     </style>
 
@@ -655,7 +667,7 @@
         muted="true"
         preload="metadata"
         width="100%"
-        src="img/White Brown Modern Minimalist Real Estate Open House Video.mp4">
+        src="img/rent.mp4">
         </video>
     </section>
     <!-- Dropdown menu section -------------------------------------------------------------------------------------------------------->
