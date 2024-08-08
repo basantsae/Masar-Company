@@ -1170,7 +1170,7 @@ object-fit: fill;
                     ${property.propertyPictures
                       .map(
                         (img) => `
-                      <div class="swiper-slider">
+                      <div class="swiper-slide">
                         <img src="${host}/images/${img}" alt="${property.propertyType}" class="w-100" />
                       </div>
                     `
@@ -1257,6 +1257,8 @@ object-fit: fill;
           },
         });
       }
+
+      console.log(listItem)
     </script>
     <footer class="footer">
       <div class="footer-top">
